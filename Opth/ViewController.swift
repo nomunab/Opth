@@ -26,6 +26,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
         cell.cardFront.text = deck.cards[0].front
+        cell.cardBack.text = deck.cards[0].back
+        
        // cell.cardFront = deck.cards[indexPath.row].front
         // possibly have previous cards disappear if flipped
         //This creates the shadows and modifies the cards a little bit

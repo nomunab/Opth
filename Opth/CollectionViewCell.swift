@@ -12,4 +12,6 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var cardBack: UILabel!
+    
+    
 }
