@@ -8,14 +8,14 @@
 
 import UIKit
 
+// view controller of card front
 class ViewController: UIViewController{
 
     static let cardCornerRadius: CGFloat = 25
     
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
-    
-    //var deck = CardDeck() // store in seperate class later
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

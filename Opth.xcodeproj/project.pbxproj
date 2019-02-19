@@ -88,6 +88,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FDD1932F221BBB80000A2F63 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */,
+				FDF2A57522163BBE00B1E1D0 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FDD19330221BBB9A000A2F63 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FDF2A57C22163BBE00B1E1D0 /* LaunchScreen.storyboard */,
+				FDF2A57722163BBE00B1E1D0 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FDD19331221BBBB3000A2F63 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */,
+				FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		FDD19332221BBBC7000A2F63 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				FDD1932D221B921D000A2F63 /* Progress.swift */,
+				FDF2A5A82216505800B1E1D0 /* Card.swift */,
+				FDF2A5A62216500600B1E1D0 /* CardDeck.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		FDF2A56722163BBE00B1E1D0 = {
 			isa = PBXGroup;
 			children = (
@@ -112,18 +149,13 @@
 			isa = PBXGroup;
 			children = (
 				FDF2A57322163BBE00B1E1D0 /* AppDelegate.swift */,
-				FDF2A57522163BBE00B1E1D0 /* ViewController.swift */,
-				FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */,
-				FDF2A57722163BBE00B1E1D0 /* Main.storyboard */,
+				FDD1932F221BBB80000A2F63 /* View Controllers */,
+				FDD19330221BBB9A000A2F63 /* UI */,
 				FDF2A57A22163BBE00B1E1D0 /* Assets.xcassets */,
-				FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */,
-				FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */,
-				FDF2A57C22163BBE00B1E1D0 /* LaunchScreen.storyboard */,
+				FDD19331221BBBB3000A2F63 /* Animation */,
 				FDF2A57F22163BBE00B1E1D0 /* Info.plist */,
 				FDF2A5A322163F0C00B1E1D0 /* Information */,
-				FDF2A5A62216500600B1E1D0 /* CardDeck.swift */,
-				FDF2A5A82216505800B1E1D0 /* Card.swift */,
-				FDD1932D221B921D000A2F63 /* Progress.swift */,
+				FDD19332221BBBC7000A2F63 /* Card */,
 			);
 			path = Opth;
 			sourceTree = "<group>";

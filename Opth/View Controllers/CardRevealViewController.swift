@@ -9,6 +9,7 @@
 import Foundation
 
 import UIKit
+// view controller of card back
 // add scroll view
 class CardRevealViewController: UIViewController {
         
