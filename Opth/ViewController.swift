@@ -8,43 +8,50 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class ViewController: UIViewController{
 
-    var deck = CardDeck() // store in seperate class later
+    static let cardCornerRadius: CGFloat = 25
+    
+    @IBOutlet weak var cardFront: UILabel!
+    @IBOutlet weak var card: UIView!
+    
+    //var deck = CardDeck() // store in seperate class later
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         createDeck(data: csv(data:"/Users/Angie/Desktop/Topic.txt"))
-        printDeck()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1 // number of cards on the screen
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-        cell.cardFront.text = deck.cards[0].front
-        cell.cardBack.text = deck.cards[0].back
+        status.printDeck()
         
-       // cell.cardFront = deck.cards[indexPath.row].front
-        // possibly have previous cards disappear if flipped
-        //This creates the shadows and modifies the cards a little bit
-        cell.contentView.layer.cornerRadius = 4.0
-        cell.contentView.layer.borderWidth = 1.0
-        cell.contentView.layer.borderColor = UIColor.clear.cgColor
-        cell.contentView.layer.masksToBounds = false
-        cell.layer.shadowColor = UIColor.gray.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        cell.layer.shadowRadius = 4.0
-        cell.layer.shadowOpacity = 1.0
-        cell.layer.masksToBounds = false
-        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
-        return cell
+        cardFront.text = status.getFront(index: 0)
+        
+        card.layer.cornerRadius = 4.0
+        card.layer.borderWidth = 1.0
+        card.layer.borderColor = UIColor.clear.cgColor
+        card.layer.masksToBounds = false
+        card.layer.shadowColor = UIColor.gray.cgColor
+        card.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        card.layer.shadowRadius = 4.0
+        card.layer.shadowOpacity = 1.0
+        card.layer.masksToBounds = false
+        card.layer.shadowPath = UIBezierPath(roundedRect: card.bounds, cornerRadius: card.layer.cornerRadius).cgPath
+    }
+    @IBAction func handleTap(_ sender: Any) {
+        print("tap")
+        performSegue(withIdentifier: "reveal", sender: nil)
     }
     
-    // these functions will be in another class eventually but for simplicity they are here...
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "reveal",
+            let destinationViewController = segue.destination as? CardRevealViewController {
+            destinationViewController.transitioningDelegate = self
+        }
+    }
+    
+    
+    
+    
+    // these functions will be in another class eventually but for simplicity/laziness they are here...
     func csv(data: String) -> [[String]]{
         var parsedData:[[String]] = [[]]
         do {
@@ -65,7 +72,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         var count = 0;
         for item in data{
             if count == 0 {// topic heading
-                deck.topic = item[0]
+                status.setTopic(topic: item[0])
                 count=1
                 continue
             }
@@ -80,15 +87,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 }
             }
             var card = Card(front: front, back: back);
-            deck.cards.append(card)
-        }
-    }
-
-    func printDeck(){
-        for item in deck.cards{
-            print(item.front)
+            status.insert(card: card)
         }
     }
 
 }
 
+extension ViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController,
+                             presenting: UIViewController,
+                             source: UIViewController)
+        -> UIViewControllerAnimatedTransitioning? {
+            return FlipPresentAnimationController(originFrame: card.frame)
+    }
+}
