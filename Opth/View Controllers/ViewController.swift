@@ -86,7 +86,7 @@ class ViewController: UIViewController{
                     back.append(item[backItem])
                 }
             }
-            var card = Card(front: front, back: back);
+            let  card = Card(front: front, back: back);
             status.insert(card: card)
         }
     }
