@@ -20,7 +20,8 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        createDeck(data: csv(data:"/Users/Angie/Desktop/Topic.txt"))
+        //createDeck(data: csv(data:"/Users/Angie/Desktop/Topic.txt"))
+        createDeck(data: csv(data:"/Users/Itzel/Desktop/Topic.txt"))
         status.printDeck()
         
         cardFront.text = status.getFront(index: 0)

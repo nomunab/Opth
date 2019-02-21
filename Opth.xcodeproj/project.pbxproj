@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC65D0B0221E220200E4923A /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D0AF221E220200E4923A /* IndexViewController.swift */; };
 		FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */; };
 		FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */; };
 		FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC65D0AF221E220200E4923A /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRevealViewController.swift; sourceTree = "<group>"; };
 		FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		FDD1932F221BBB80000A2F63 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BC65D0AF221E220200E4923A /* IndexViewController.swift */,
 				FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */,
 				FDF2A57522163BBE00B1E1D0 /* ViewController.swift */,
 			);
@@ -320,6 +323,7 @@
 			files = (
 				FDF2A57622163BBE00B1E1D0 /* ViewController.swift in Sources */,
 				FDF2A5A92216505800B1E1D0 /* Card.swift in Sources */,
+				BC65D0B0221E220200E4923A /* IndexViewController.swift in Sources */,
 				FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */,
 				FDF2A57422163BBE00B1E1D0 /* AppDelegate.swift in Sources */,
 				FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */,
