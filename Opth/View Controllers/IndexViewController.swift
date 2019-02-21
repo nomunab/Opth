@@ -48,11 +48,12 @@ class IndexViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchList = list.filter({$0.prefix(searchText.count) == searchText}) //$0 means it will populate every area
+        searchList = list.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()}) //$0 means it will populate every area
         searching = true
         tableView.reloadData()
     }
     
+    // so when press cancel, it clears the search bar
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searching = false
         searchBar.text = ""
