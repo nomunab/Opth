@@ -1,4 +1,4 @@
-# Clinical Opthomology Application
+# Senior Design Project 
 
 ### Angie's Parsing Notes:
 Parsing works as far as i know! :D Sorry it took so long (im gonna fail chem and its 4am, 
