@@ -20,10 +20,12 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        createDeck(data: csv(data:"/Users/Angie/Desktop/Topic.txt"))
-        status.printDeck()
+        parse.csv(data:"/Users/Angie/Desktop/test/SmallTes.txt")
+        status.printContents()
+
         
-        cardFront.text = status.getFront(index: 0)
+        //cardFront.text = status.getFront(index: 0)
+        cardFront.text = "Pharmacologic Side Effects"
         
         card.layer.cornerRadius = 4.0
         card.layer.borderWidth = 1.0
@@ -48,49 +50,6 @@ class ViewController: UIViewController{
         }
     }
     
-    
-    
-    
-    // these functions will be in another class eventually but for simplicity/laziness they are here...
-    func csv(data: String) -> [[String]]{
-        var parsedData:[[String]] = [[]]
-        do {
-            let contents = try String(contentsOfFile: data)
-            let parsedCSV: [[String]] = contents
-                .components(separatedBy: "\n")
-                .map({
-                    $0.components(separatedBy: "\t")
-                })
-            parsedData = parsedCSV // if successful return this
-        } catch {
-            print(error);
-        }
-        return parsedData
-    }
-    
-    func createDeck(data:[[String]]){
-        var count = 0;
-        for item in data{
-            if count == 0 {// topic heading
-                status.setTopic(topic: item[0])
-                count=1
-                continue
-            }
-            var front = "empty"
-            var back = ""
-            for backItem in 0..<item.count{
-                if backItem == 0{
-                    front = item[backItem]
-                }
-                else{
-                    back.append(item[backItem])
-                }
-            }
-            let  card = Card(front: front, back: back);
-            status.insert(card: card)
-        }
-    }
-
 }
 
 extension ViewController: UIViewControllerTransitioningDelegate {

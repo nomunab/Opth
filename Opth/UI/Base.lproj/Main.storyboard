@@ -60,23 +60,23 @@
             <objects>
                 <viewController id="LNz-K0-qAO" customClass="CardRevealViewController" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dVb-0w-STE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1050"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWn-Bi-kxF">
-                                <rect key="frame" x="0.0" y="0.0" width="342" height="1050"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NfK-z1-xGX">
-                                        <rect key="frame" x="0.0" y="0.0" width="342" height="1030"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1030"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pharmacologic Side Effects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmN-na-p89">
-                                                <rect key="frame" x="10" y="35" width="322" height="30"/>
+                                                <rect key="frame" x="10" y="35" width="355" height="30"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha agonists (&quot;ALGAN&quot;)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fW4-nb-kiK">
-                                                <rect key="frame" x="10" y="75" width="322" height="22"/>
+                                                <rect key="frame" x="10" y="75" width="355" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -89,7 +89,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amiodarone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSh-mP-Qm9">
-                                                <rect key="frame" x="10" y="202.5" width="322" height="22"/>
+                                                <rect key="frame" x="10" y="202.5" width="355" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -101,7 +101,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beta Blockers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHJ-uG-Q0X">
-                                                <rect key="frame" x="10" y="273" width="322" height="22"/>
+                                                <rect key="frame" x="10" y="273" width="355" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -113,7 +113,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbonic Anhydrase Inhibitors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EL-cg-wdh">
-                                                <rect key="frame" x="10" y="362.5" width="322" height="22"/>
+                                                <rect key="frame" x="10" y="362.5" width="355" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -126,7 +126,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carmustine (alkylating agent)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXR-E0-DgT">
-                                                <rect key="frame" x="10" y="509.5" width="322" height="22"/>
+                                                <rect key="frame" x="10" y="509.5" width="355" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -138,7 +138,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chloroquine / Hydroxychloroquine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfE-Ov-eWN">
-                                                <rect key="frame" x="10" y="618" width="322" height="22"/>
+                                                <rect key="frame" x="10" y="618" width="355" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -150,7 +150,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cidofovir (CMV therapy)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmq-aN-Zmy">
-                                                <rect key="frame" x="10" y="707.5" width="322" height="22"/>
+                                                <rect key="frame" x="10" y="707.5" width="355" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -162,7 +162,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digoxin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5M-Yj-sTC">
-                                                <rect key="frame" x="10" y="759" width="322" height="22"/>
+                                                <rect key="frame" x="10" y="759" width="355" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -174,7 +174,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diuretics (HCTZ)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJN-2s-e1h">
-                                                <rect key="frame" x="10" y="810.5" width="322" height="22"/>
+                                                <rect key="frame" x="10" y="810.5" width="355" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -186,7 +186,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Echothiophate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWB-ZU-dNq">
-                                                <rect key="frame" x="10" y="881" width="322" height="22"/>
+                                                <rect key="frame" x="10" y="881" width="355" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -198,7 +198,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Epinephrine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceX-nW-NJ8">
-                                                <rect key="frame" x="10" y="951.5" width="322" height="22"/>
+                                                <rect key="frame" x="10" y="951.5" width="355" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -284,26 +284,39 @@
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rLf-9j-wWi" secondAttribute="trailing" id="zsw-CV-DX5"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMY-c1-5G0">
+                                        <rect key="frame" x="147" y="1051" width="49" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismiss:" destination="LNz-K0-qAO" eventType="touchUpInside" id="b3V-Q2-P6F"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="NfK-z1-xGX" firstAttribute="top" secondItem="UWn-Bi-kxF" secondAttribute="top" id="8v3-dg-9zr"/>
-                                    <constraint firstAttribute="bottom" secondItem="NfK-z1-xGX" secondAttribute="bottom" id="EiO-es-bsp"/>
                                     <constraint firstAttribute="trailing" secondItem="NfK-z1-xGX" secondAttribute="trailing" id="Ipx-Q8-4EJ"/>
                                     <constraint firstItem="NfK-z1-xGX" firstAttribute="centerX" secondItem="UWn-Bi-kxF" secondAttribute="centerX" id="Lma-lC-QNb"/>
-                                    <constraint firstAttribute="bottom" secondItem="NfK-z1-xGX" secondAttribute="bottom" id="NBM-vL-0ff"/>
+                                    <constraint firstItem="NMY-c1-5G0" firstAttribute="leading" secondItem="UWn-Bi-kxF" secondAttribute="leading" constant="147" id="Peh-eH-lqp"/>
+                                    <constraint firstAttribute="bottom" secondItem="NMY-c1-5G0" secondAttribute="bottom" constant="13" id="Tf4-oq-eJc"/>
+                                    <constraint firstItem="NMY-c1-5G0" firstAttribute="top" secondItem="lql-m6-Clu" secondAttribute="bottom" constant="20" id="YS5-ud-Khw"/>
+                                    <constraint firstItem="NMY-c1-5G0" firstAttribute="top" secondItem="NfK-z1-xGX" secondAttribute="bottom" constant="21" id="bzM-fu-Gyg"/>
                                     <constraint firstItem="NfK-z1-xGX" firstAttribute="leading" secondItem="UWn-Bi-kxF" secondAttribute="leading" id="uSd-NN-xcW"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="UWn-Bi-kxF" firstAttribute="centerX" secondItem="dVb-0w-STE" secondAttribute="centerX" id="FXW-yb-eEC"/>
                             <constraint firstItem="UWn-Bi-kxF" firstAttribute="top" secondItem="dVb-0w-STE" secondAttribute="top" id="RBh-1p-UjL"/>
                             <constraint firstItem="UWn-Bi-kxF" firstAttribute="bottom" secondItem="Leq-Eb-dbv" secondAttribute="bottom" id="UTq-Ik-ccG"/>
                             <constraint firstItem="UWn-Bi-kxF" firstAttribute="leading" secondItem="dVb-0w-STE" secondAttribute="leading" id="XMQ-UY-msj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Leq-Eb-dbv"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1050"/>
+                    <size key="freeformSize" width="375" height="1100"/>
                     <connections>
                         <outlet property="Alpha" destination="RAw-8m-8HY" id="D8Z-JC-c0k"/>
                         <outlet property="Amiodarone" destination="BmA-NV-mui" id="QJn-Kf-Xky"/>
