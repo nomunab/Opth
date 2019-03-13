@@ -12,6 +12,8 @@ are removed.
 EX. orig: "Retina, Wavelengths, img, header, info, header, info"
 		after delete from excel file: "\n\t\t\t\t\t\t\t\t\t" <- this is how it parses and idk why
 
+More mentions of this in the comments. 
+
 #### Structure
 There is a class of Status, Parse, Category, Topic, Subtopic, Card
 
