@@ -23,7 +23,6 @@
 		FDF2A57E22163BBE00B1E1D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF2A57C22163BBE00B1E1D0 /* LaunchScreen.storyboard */; };
 		FDF2A58922163BBF00B1E1D0 /* OpthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2A58822163BBF00B1E1D0 /* OpthTests.swift */; };
 		FDF2A59422163BBF00B1E1D0 /* OpthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2A59322163BBF00B1E1D0 /* OpthUITests.swift */; };
-		FDF2A5A522163F3000B1E1D0 /* Topic.csv in Resources */ = {isa = PBXBuildFile; fileRef = FDF2A5A422163F3000B1E1D0 /* Topic.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		FDF2A58F22163BBF00B1E1D0 /* OpthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF2A59322163BBF00B1E1D0 /* OpthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpthUITests.swift; sourceTree = "<group>"; };
 		FDF2A59522163BBF00B1E1D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDF2A5A422163F3000B1E1D0 /* Topic.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Topic.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +188,6 @@
 		FDF2A5A322163F0C00B1E1D0 /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				FDF2A5A422163F3000B1E1D0 /* Topic.csv */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -300,7 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF2A57E22163BBE00B1E1D0 /* LaunchScreen.storyboard in Resources */,
-				FDF2A5A522163F3000B1E1D0 /* Topic.csv in Resources */,
 				FDF2A57B22163BBE00B1E1D0 /* Assets.xcassets in Resources */,
 				FDF2A57922163BBE00B1E1D0 /* Main.storyboard in Resources */,
 			);

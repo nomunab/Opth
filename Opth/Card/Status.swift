@@ -85,7 +85,6 @@ class Status{
     
     // IM SORRY THIS IS SO DISGUSTINGLY UGLY
     func addCard(category:String, topic:String, subtopic: String, header:String, info:String){
-        print("addcard")
         var matchExists:Bool = false
         var topicCategory:Category = Category(name: "null")
         var subtopicTopic:Topic = Topic(topic: "null")
@@ -112,7 +111,7 @@ class Status{
                 }
             }
         }
-        if(matchExists == false){
+        if(matchExists == false && header != "nil"){
             let newCard = Card(header: header, info: info)
             cardSubtopic.cards.append(newCard)
         }
