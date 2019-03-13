@@ -17,15 +17,18 @@ More mentions of this in the comments.
 #### Structure
 There is a class of Status, Parse, Category, Topic, Subtopic, Card
 
-Status: intended to be the only one with access to the parsed data, includes functions 
-				to interact with the parsed information.
-Parse: seperates file data and calls status functions
-Category: Stores name of category, and list of subtopic objects.
-Subtopic: Stores name of subtopic, and list of topic objects.
-Topic: Stores name of topic, and list of card objects.
-Card: Is technically not a card as the name suggests but it contains the header and the
-			information for the header. 
+<ul>
 
+<li>Status: intended to be the only one with access to the parsed data, includes functions 
+				to interact with the parsed information.</li>
+<li>Parse: seperates file data and calls status functions</li>
+<li>Category: Stores name of category, and list of subtopic objects.</li>
+<li>Subtopic: Stores name of subtopic, and list of topic objects.</li>
+<li>Topic: Stores name of topic, and list of card objects.</li>
+<li>Card: Is technically not a card as the name suggests but it contains the header and the
+			information for the header. </li>
+
+</ul>
 There is a print function in status that prints out the current layout of parsed
 items in a hierarchy for debugging purposes. 
 
