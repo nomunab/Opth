@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1757A7163567623799DF48E7 /* Pods_Opth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6AF61D6A3022057A87904E /* Pods_Opth.framework */; };
+		559C2A5B83A0BAD892A8260B /* Pods_OpthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F60C3A5A88D732E8CCED1CC /* Pods_OpthUITests.framework */; };
+		B15403C68CD78D97600397AD /* Pods_OpthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */; };
 		FD056E6C22387DF8003CBB68 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD056E6B22387DF8003CBB68 /* Category.swift */; };
 		FD056E6E22387E1D003CBB68 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD056E6D22387E1D003CBB68 /* Topic.swift */; };
 		FD056E702238811E003CBB68 /* Subtopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD056E6F2238811E003CBB68 /* Subtopic.swift */; };
@@ -43,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04E1F4FB0135C9CABB446776 /* Pods-Opth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opth.release.xcconfig"; path = "Target Support Files/Pods-Opth/Pods-Opth.release.xcconfig"; sourceTree = "<group>"; };
+		0F60C3A5A88D732E8CCED1CC /* Pods_OpthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C5D1A9C0390EB23CF35392C /* Pods-OpthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthTests.debug.xcconfig"; path = "Target Support Files/Pods-OpthTests/Pods-OpthTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73694D2F8A40800434A566FB /* Pods-OpthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthUITests.release.xcconfig"; path = "Target Support Files/Pods-OpthUITests/Pods-OpthUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7842305F1F15E03D21C79C52 /* Pods-Opth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opth.debug.xcconfig"; path = "Target Support Files/Pods-Opth/Pods-Opth.debug.xcconfig"; sourceTree = "<group>"; };
+		9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4294AB1A1663C9CE4584AF2 /* Pods-OpthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthTests.release.xcconfig"; path = "Target Support Files/Pods-OpthTests/Pods-OpthTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA1DF0D4173FD1C0487E7CCB /* Pods-OpthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthUITests.debug.xcconfig"; path = "Target Support Files/Pods-OpthUITests/Pods-OpthUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB6AF61D6A3022057A87904E /* Pods_Opth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Opth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD056E6B22387DF8003CBB68 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		FD056E6D22387E1D003CBB68 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		FD056E6F2238811E003CBB68 /* Subtopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtopic.swift; sourceTree = "<group>"; };
@@ -72,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1757A7163567623799DF48E7 /* Pods_Opth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B15403C68CD78D97600397AD /* Pods_OpthTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +100,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559C2A5B83A0BAD892A8260B /* Pods_OpthUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		498A9E83F7548277721586BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB6AF61D6A3022057A87904E /* Pods_Opth.framework */,
+				9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */,
+				0F60C3A5A88D732E8CCED1CC /* Pods_OpthUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E9F92760F0A236D78A130C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7842305F1F15E03D21C79C52 /* Pods-Opth.debug.xcconfig */,
+				04E1F4FB0135C9CABB446776 /* Pods-Opth.release.xcconfig */,
+				5C5D1A9C0390EB23CF35392C /* Pods-OpthTests.debug.xcconfig */,
+				D4294AB1A1663C9CE4584AF2 /* Pods-OpthTests.release.xcconfig */,
+				FA1DF0D4173FD1C0487E7CCB /* Pods-OpthUITests.debug.xcconfig */,
+				73694D2F8A40800434A566FB /* Pods-OpthUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FDD1932F221BBB80000A2F63 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +178,8 @@
 				FDF2A58722163BBF00B1E1D0 /* OpthTests */,
 				FDF2A59222163BBF00B1E1D0 /* OpthUITests */,
 				FDF2A57122163BBE00B1E1D0 /* Products */,
+				9E9F92760F0A236D78A130C1 /* Pods */,
+				498A9E83F7548277721586BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,9 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDF2A59822163BBF00B1E1D0 /* Build configuration list for PBXNativeTarget "Opth" */;
 			buildPhases = (
+				0B0D7B6EB122F85BF033065A /* [CP] Check Pods Manifest.lock */,
 				FDF2A56C22163BBE00B1E1D0 /* Sources */,
 				FDF2A56D22163BBE00B1E1D0 /* Frameworks */,
 				FDF2A56E22163BBE00B1E1D0 /* Resources */,
+				066278ECF47F6D304E1140E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +259,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDF2A59B22163BBF00B1E1D0 /* Build configuration list for PBXNativeTarget "OpthTests" */;
 			buildPhases = (
+				DB86B9588DEF00D648CD5843 /* [CP] Check Pods Manifest.lock */,
 				FDF2A58022163BBF00B1E1D0 /* Sources */,
 				FDF2A58122163BBF00B1E1D0 /* Frameworks */,
 				FDF2A58222163BBF00B1E1D0 /* Resources */,
@@ -234,6 +278,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDF2A59E22163BBF00B1E1D0 /* Build configuration list for PBXNativeTarget "OpthUITests" */;
 			buildPhases = (
+				637E4E2787A2A6D4DEB4DDFE /* [CP] Check Pods Manifest.lock */,
 				FDF2A58B22163BBF00B1E1D0 /* Sources */,
 				FDF2A58C22163BBF00B1E1D0 /* Frameworks */,
 				FDF2A58D22163BBF00B1E1D0 /* Resources */,
@@ -317,6 +362,97 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		066278ECF47F6D304E1140E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Opth/Pods-Opth-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SMLib/SMLib.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SMLib.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Opth/Pods-Opth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0B0D7B6EB122F85BF033065A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Opth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		637E4E2787A2A6D4DEB4DDFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpthUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB86B9588DEF00D648CD5843 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpthTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FDF2A56C22163BBE00B1E1D0 /* Sources */ = {
@@ -506,6 +642,7 @@
 		};
 		FDF2A59922163BBF00B1E1D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7842305F1F15E03D21C79C52 /* Pods-Opth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -524,6 +661,7 @@
 		};
 		FDF2A59A22163BBF00B1E1D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04E1F4FB0135C9CABB446776 /* Pods-Opth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -542,6 +680,7 @@
 		};
 		FDF2A59C22163BBF00B1E1D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C5D1A9C0390EB23CF35392C /* Pods-OpthTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -563,6 +702,7 @@
 		};
 		FDF2A59D22163BBF00B1E1D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4294AB1A1663C9CE4584AF2 /* Pods-OpthTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -584,6 +724,7 @@
 		};
 		FDF2A59F22163BBF00B1E1D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA1DF0D4173FD1C0487E7CCB /* Pods-OpthUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -604,6 +745,7 @@
 		};
 		FDF2A5A022163BBF00B1E1D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73694D2F8A40800434A566FB /* Pods-OpthUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
