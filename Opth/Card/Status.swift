@@ -10,7 +10,7 @@ import Foundation
 // handles all interactions with altering the data
 // when database is decided, this will handle all interactions with the database
 class Status{
-    var ReviewList:[Subtopic] // list of cards to for review
+    var ReviewList:[Subtopic] // list of subtopics/slides to for review/spaced rep
     var CategoryList:[Category]
     
     init(){

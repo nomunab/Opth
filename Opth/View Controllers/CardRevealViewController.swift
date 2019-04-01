@@ -11,23 +11,15 @@ import Foundation
 import UIKit
 // view controller of card back
 // add scroll view
-class CardRevealViewController: UIViewController {
-        
-//    @IBOutlet weak var backTitle: UILabel!
-//    @IBOutlet weak var backContent: UILabel!
+class CardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
 
+    @IBOutlet weak var subtopicTableView: SubtopicTableView!
     //count how many taps
     var counter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        backTitle.text = status.getFront(index: 0)
-//        backContent.text = status.getBack(index: 0)
-        //Hide all the labels in the beginning
-        //recognize the tap by users
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.tap))
-//        myView.isUserInteractionEnabled = true
-//        myView.addGestureRecognizer(tap)
         
     }
     
@@ -48,5 +40,27 @@ class CardRevealViewController: UIViewController {
     @IBAction func dismiss(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+    
+    // Return the number of rows for the table.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return status.ReviewList[1].cards.count
+    }
+    
+    // Provide a cell object for each row.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Fetch a cell of the appropriate type.
+        var cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath)
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCell.CellStyle.value2, reuseIdentifier: "infoCell")
+        }
+        
+        // Configure the cell’s contents.
+        //cell.textLabel!.text = "Cell text"
+        cell.textLabel!.text = status.ReviewList[1].cards[indexPath.row].header
+        cell.detailTextLabel!.text = status.ReviewList[1].cards[indexPath.row].info
+        
+        return cell
+    }
+    
 }
 
