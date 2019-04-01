@@ -18,8 +18,18 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     //count how many taps
     var counter = 0
     
+    //Buttons
+    @IBOutlet weak var easyButton: UIButton!
+    @IBOutlet weak var unsureButton: UIButton!
+    @IBOutlet weak var hardButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //UI for buttons
+        easyButton.layer.cornerRadius = 10
+        unsureButton.layer.cornerRadius = 10
+        hardButton.layer.cornerRadius = 10
         
     }
     
