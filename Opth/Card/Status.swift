@@ -10,11 +10,19 @@ import Foundation
 // handles all interactions with altering the data
 // when database is decided, this will handle all interactions with the database
 class Status{
+    var ReviewList:[Subtopic] // list of cards to for review
     var CategoryList:[Category]
     
     init(){
+        self.ReviewList = []
         self.CategoryList = []
     }
+    
+    func calculateReviewList(){
+        self.ReviewList = CategoryList[0].topics[0].subtopics;
+        print(self.ReviewList)
+    }
+    
     
     // these functions are really inefficent but its 3am, will fix later
     func addCategory(category:String){

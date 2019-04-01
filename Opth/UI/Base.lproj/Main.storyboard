@@ -60,281 +60,53 @@
             <objects>
                 <viewController id="LNz-K0-qAO" customClass="CardRevealViewController" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dVb-0w-STE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWn-Bi-kxF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NfK-z1-xGX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1030"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pharmacologic Side Effects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmN-na-p89">
-                                                <rect key="frame" x="10" y="35" width="355" height="30"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha agonists (&quot;ALGAN&quot;)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fW4-nb-kiK">
-                                                <rect key="frame" x="10" y="75" width="355" height="22"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Allergy / anaphylaxis - Lid retraction - Groggy (bradycardia) - Apnea - Nutty (CNS depression in kids)" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAw-8m-8HY" userLabel="- Allergy">
-                                                <rect key="frame" x="40" y="97" width="235" height="95.5"/>
-                                                <gestureRecognizers/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amiodarone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSh-mP-Qm9">
-                                                <rect key="frame" x="10" y="202.5" width="355" height="22"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Corneal verticillata - Anterior subcapsular opacities" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmA-NV-mui" userLabel="- Corneal">
-                                                <rect key="frame" x="40" y="224.5" width="232" height="38.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beta Blockers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHJ-uG-Q0X">
-                                                <rect key="frame" x="10" y="273" width="355" height="22"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Heart block, asthma, sexual dysfunction - Betaxolol? - Carteolol?" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osk-ge-Bfg" userLabel="- Heart">
-                                                <rect key="frame" x="40" y="295" width="302" height="57.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbonic Anhydrase Inhibitors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EL-cg-wdh">
-                                                <rect key="frame" x="10" y="362.5" width="355" height="22"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QH-AZ-2qf" userLabel="- Acute">
-                                                <rect key="frame" x="40" y="384.5" width="294.5" height="115"/>
-                                                <string key="text">- Acute myopia - Tingling digits, anorexia, depression - Bitter taste (dorzolamide/brinzolamide) - Acidosis, hypokalemia - Methazolamide (hepatic, not renal) - Avoid in?</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carmustine (alkylating agent)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXR-E0-DgT">
-                                                <rect key="frame" x="10" y="509.5" width="355" height="22"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Retinal arterial occlusion, infarction - CME - Glaucoma - Optic neuritis or INO" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL3-WG-GfJ" userLabel="- Retinal">
-                                                <rect key="frame" x="40" y="531.5" width="265.5" height="76.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chloroquine / Hydroxychloroquine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfE-Ov-eWN">
-                                                <rect key="frame" x="10" y="618" width="355" height="22"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Corneal verticillata - Pigment / Bull's eye maculopathy - Halo around lights, but no vision chg" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLf-9j-wWi" userLabel="- Corneal - Pigment">
-                                                <rect key="frame" x="40" y="640" width="275.5" height="57.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cidofovir (CMV therapy)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmq-aN-Zmy">
-                                                <rect key="frame" x="10" y="707.5" width="355" height="22"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Uveitis" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6T-VD-r4W">
-                                                <rect key="frame" x="40" y="729.5" width="61" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digoxin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5M-Yj-sTC">
-                                                <rect key="frame" x="10" y="759" width="355" height="22"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Xanthopsia (yello vision)" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAu-Fp-y9e" userLabel="- Xanthopsia">
-                                                <rect key="frame" x="40" y="781" width="188.5" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diuretics (HCTZ)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJN-2s-e1h">
-                                                <rect key="frame" x="10" y="810.5" width="355" height="22"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Xanthopsia - Transient myopia" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuC-Uu-dDu" userLabel="- Xan Tran">
-                                                <rect key="frame" x="40" y="832.5" width="135" height="38.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Echothiophate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWB-ZU-dNq">
-                                                <rect key="frame" x="10" y="881" width="355" height="22"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Iris cysts, cataracts - Avoid succinylcholine" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aK-iu-IGb" userLabel="- Iris">
-                                                <rect key="frame" x="40" y="903" width="166.5" height="38.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Epinephrine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceX-nW-NJ8">
-                                                <rect key="frame" x="10" y="951.5" width="355" height="22"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Adrenochrome deposits - Less with propine - CME if pseudophakic/aphakic" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lql-m6-Clu" userLabel="- Adrenochrome">
-                                                <rect key="frame" x="40" y="973.5" width="226.5" height="57.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="fW4-nb-kiK" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="10" id="05L-NJ-UdZ"/>
-                                            <constraint firstItem="AJN-2s-e1h" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="10" id="0IC-6M-aYK"/>
-                                            <constraint firstItem="GL3-WG-GfJ" firstAttribute="top" secondItem="gXR-E0-DgT" secondAttribute="bottom" id="0cS-4K-QaK"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RAw-8m-8HY" secondAttribute="trailing" id="2VU-am-6cR"/>
-                                            <constraint firstItem="rLf-9j-wWi" firstAttribute="top" secondItem="XfE-Ov-eWN" secondAttribute="bottom" id="2Vb-rA-pqQ"/>
-                                            <constraint firstItem="iAu-Fp-y9e" firstAttribute="top" secondItem="d5M-Yj-sTC" secondAttribute="bottom" id="2js-h0-Txw"/>
-                                            <constraint firstItem="7aK-iu-IGb" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="40" id="2wc-NB-4Ty"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="k6T-VD-r4W" secondAttribute="trailing" id="3Te-tl-oPx"/>
-                                            <constraint firstItem="Qmq-aN-Zmy" firstAttribute="top" secondItem="rLf-9j-wWi" secondAttribute="bottom" constant="10" id="3gl-uO-cUN"/>
-                                            <constraint firstAttribute="trailing" secondItem="d5M-Yj-sTC" secondAttribute="trailing" constant="10" id="6Hz-9G-zYq"/>
-                                            <constraint firstItem="bmN-na-p89" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="10" id="9FH-40-ye3"/>
-                                            <constraint firstAttribute="trailing" secondItem="gXR-E0-DgT" secondAttribute="trailing" constant="10" id="ACu-bO-3i3"/>
-                                            <constraint firstItem="HSh-mP-Qm9" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="10" id="Bvw-Zz-1sD"/>
-                                            <constraint firstItem="bmN-na-p89" firstAttribute="top" secondItem="NfK-z1-xGX" secondAttribute="top" constant="35" id="CkR-d4-hRo"/>
-                                            <constraint firstAttribute="trailing" secondItem="fW4-nb-kiK" secondAttribute="trailing" constant="10" id="Dyz-7p-H5p"/>
-                                            <constraint firstItem="GL3-WG-GfJ" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="40" id="E9Q-0D-nUG"/>
-                                            <constraint firstItem="RAw-8m-8HY" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="40" id="EJc-A9-mfr"/>
-                                            <constraint firstItem="XfE-Ov-eWN" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="10" id="EKg-4h-Uwn"/>
-                                            <constraint firstItem="k6T-VD-r4W" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="40" id="FKD-rH-lTJ"/>
-                                            <constraint firstItem="ceX-nW-NJ8" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="10" id="FeV-EQ-iXM"/>
-                                            <constraint firstAttribute="trailing" secondItem="ceX-nW-NJ8" secondAttribute="trailing" constant="10" id="Gvz-EC-x3l"/>
-                                            <constraint firstItem="BmA-NV-mui" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="40" id="HFJ-d8-fZr"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lql-m6-Clu" secondAttribute="trailing" id="HYe-TZ-l0F"/>
-                                            <constraint firstItem="rLf-9j-wWi" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="40" id="J7D-lF-bic"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iAu-Fp-y9e" secondAttribute="trailing" id="JMY-DZ-mpR"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7aK-iu-IGb" secondAttribute="trailing" id="JaF-Pa-oME"/>
-                                            <constraint firstItem="lql-m6-Clu" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="40" id="Ku7-f1-BRz"/>
-                                            <constraint firstItem="d5M-Yj-sTC" firstAttribute="top" secondItem="k6T-VD-r4W" secondAttribute="bottom" constant="10" id="LUP-ig-VUZ"/>
-                                            <constraint firstItem="RAw-8m-8HY" firstAttribute="top" secondItem="fW4-nb-kiK" secondAttribute="bottom" id="Mqo-J9-FhK"/>
-                                            <constraint firstItem="BmA-NV-mui" firstAttribute="top" secondItem="HSh-mP-Qm9" secondAttribute="bottom" id="O2c-td-cuB"/>
-                                            <constraint firstItem="7aK-iu-IGb" firstAttribute="top" secondItem="AWB-ZU-dNq" secondAttribute="bottom" id="O6W-UG-HsY"/>
-                                            <constraint firstItem="HSh-mP-Qm9" firstAttribute="top" secondItem="RAw-8m-8HY" secondAttribute="bottom" constant="10" id="S4a-Lk-d3Q"/>
-                                            <constraint firstItem="PuC-Uu-dDu" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="40" id="Tom-rJ-cA7"/>
-                                            <constraint firstItem="AWB-ZU-dNq" firstAttribute="top" secondItem="PuC-Uu-dDu" secondAttribute="bottom" constant="10" id="U9h-Kc-1xx"/>
-                                            <constraint firstItem="gXR-E0-DgT" firstAttribute="top" secondItem="3QH-AZ-2qf" secondAttribute="bottom" constant="10" id="UB7-Yf-FMj"/>
-                                            <constraint firstItem="3QH-AZ-2qf" firstAttribute="top" secondItem="9EL-cg-wdh" secondAttribute="bottom" id="VFd-sA-Whg"/>
-                                            <constraint firstItem="AWB-ZU-dNq" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="10" id="VME-I5-BQU"/>
-                                            <constraint firstItem="FHJ-uG-Q0X" firstAttribute="top" secondItem="BmA-NV-mui" secondAttribute="bottom" constant="10" id="VbH-C3-jxb"/>
-                                            <constraint firstItem="fW4-nb-kiK" firstAttribute="top" secondItem="bmN-na-p89" secondAttribute="bottom" constant="10" id="WKc-Md-ulj"/>
-                                            <constraint firstItem="gXR-E0-DgT" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="10" id="Wmt-3P-pQj"/>
-                                            <constraint firstAttribute="trailing" secondItem="9EL-cg-wdh" secondAttribute="trailing" constant="10" id="Y0G-Nb-00G"/>
-                                            <constraint firstItem="ceX-nW-NJ8" firstAttribute="top" secondItem="7aK-iu-IGb" secondAttribute="bottom" constant="10" id="YFh-Kh-Zir"/>
-                                            <constraint firstItem="9EL-cg-wdh" firstAttribute="top" secondItem="Osk-ge-Bfg" secondAttribute="bottom" constant="10" id="YaD-4a-RHF"/>
-                                            <constraint firstItem="PuC-Uu-dDu" firstAttribute="top" secondItem="AJN-2s-e1h" secondAttribute="bottom" id="Yef-6R-cBz"/>
-                                            <constraint firstItem="d5M-Yj-sTC" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="10" id="Yyy-ru-svt"/>
-                                            <constraint firstAttribute="trailing" secondItem="XfE-Ov-eWN" secondAttribute="trailing" constant="10" id="ZIk-b4-n5W"/>
-                                            <constraint firstItem="iAu-Fp-y9e" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="40" id="b6G-b7-fVv"/>
-                                            <constraint firstAttribute="trailing" secondItem="AWB-ZU-dNq" secondAttribute="trailing" constant="10" id="bdR-aG-OoG"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BmA-NV-mui" secondAttribute="trailing" id="d9N-b6-K01"/>
-                                            <constraint firstAttribute="height" constant="1030" id="dOy-3u-giI"/>
-                                            <constraint firstItem="Qmq-aN-Zmy" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="10" id="dff-dl-fBg"/>
-                                            <constraint firstItem="AJN-2s-e1h" firstAttribute="top" secondItem="iAu-Fp-y9e" secondAttribute="bottom" constant="10" id="eti-fr-abp"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PuC-Uu-dDu" secondAttribute="trailing" id="fZE-uf-9dV"/>
-                                            <constraint firstAttribute="trailing" secondItem="FHJ-uG-Q0X" secondAttribute="trailing" constant="10" id="gsf-PG-BsZ"/>
-                                            <constraint firstItem="FHJ-uG-Q0X" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="10" id="joO-TF-BUF"/>
-                                            <constraint firstItem="Osk-ge-Bfg" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="40" id="mYD-dS-2bL"/>
-                                            <constraint firstItem="Osk-ge-Bfg" firstAttribute="top" secondItem="FHJ-uG-Q0X" secondAttribute="bottom" id="oZn-j3-E4H"/>
-                                            <constraint firstAttribute="trailing" secondItem="AJN-2s-e1h" secondAttribute="trailing" constant="10" id="p8i-4Y-dhe"/>
-                                            <constraint firstItem="XfE-Ov-eWN" firstAttribute="top" secondItem="GL3-WG-GfJ" secondAttribute="bottom" constant="10" id="pBf-6R-wgZ"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3QH-AZ-2qf" secondAttribute="trailing" id="pIb-1v-RfF"/>
-                                            <constraint firstItem="9EL-cg-wdh" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="10" id="qdY-Ud-Dei"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Osk-ge-Bfg" secondAttribute="trailing" id="rHf-3a-Nt2"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GL3-WG-GfJ" secondAttribute="trailing" id="sUZ-0x-eJq"/>
-                                            <constraint firstItem="lql-m6-Clu" firstAttribute="top" secondItem="ceX-nW-NJ8" secondAttribute="bottom" id="sxo-T9-o2N"/>
-                                            <constraint firstAttribute="trailing" secondItem="HSh-mP-Qm9" secondAttribute="trailing" constant="10" id="w0f-aE-Hho"/>
-                                            <constraint firstAttribute="trailing" secondItem="bmN-na-p89" secondAttribute="trailing" constant="10" id="w6v-Sr-3fX"/>
-                                            <constraint firstItem="3QH-AZ-2qf" firstAttribute="leading" secondItem="NfK-z1-xGX" secondAttribute="leading" constant="40" id="xGv-eY-3oT"/>
-                                            <constraint firstAttribute="trailing" secondItem="Qmq-aN-Zmy" secondAttribute="trailing" constant="10" id="xo6-YD-amV"/>
-                                            <constraint firstItem="k6T-VD-r4W" firstAttribute="top" secondItem="Qmq-aN-Zmy" secondAttribute="bottom" id="yOk-Ix-GzA"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rLf-9j-wWi" secondAttribute="trailing" id="zsw-CV-DX5"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMY-c1-5G0">
-                                        <rect key="frame" x="147" y="1051" width="49" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                        <state key="normal" title="Back">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5bd-IH-adQ" customClass="SubtopicTableView" customModule="Opth" customModuleProvider="target">
+                                <rect key="frame" x="16" y="261" width="343" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="91" id="XWO-jC-J2z" customClass="SubtopicTableViewCell" customModule="Opth" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XWO-jC-J2z" id="0Fc-KA-MfV">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="90.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7e-G3-pKa">
+                                                    <rect key="frame" x="15" y="11" width="50" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r3-bZ-tah">
+                                                    <rect key="frame" x="42" y="40" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <action selector="dismiss:" destination="LNz-K0-qAO" eventType="touchUpInside" id="b3V-Q2-P6F"/>
+                                            <outlet property="Header" destination="O7e-G3-pKa" id="acf-ZE-OCe"/>
+                                            <outlet property="Info" destination="9r3-bZ-tah" id="mnV-Bz-DBp"/>
                                         </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="NfK-z1-xGX" firstAttribute="top" secondItem="UWn-Bi-kxF" secondAttribute="top" id="8v3-dg-9zr"/>
-                                    <constraint firstAttribute="trailing" secondItem="NfK-z1-xGX" secondAttribute="trailing" id="Ipx-Q8-4EJ"/>
-                                    <constraint firstItem="NfK-z1-xGX" firstAttribute="centerX" secondItem="UWn-Bi-kxF" secondAttribute="centerX" id="Lma-lC-QNb"/>
-                                    <constraint firstItem="NMY-c1-5G0" firstAttribute="leading" secondItem="UWn-Bi-kxF" secondAttribute="leading" constant="147" id="Peh-eH-lqp"/>
-                                    <constraint firstAttribute="bottom" secondItem="NMY-c1-5G0" secondAttribute="bottom" constant="13" id="Tf4-oq-eJc"/>
-                                    <constraint firstItem="NMY-c1-5G0" firstAttribute="top" secondItem="lql-m6-Clu" secondAttribute="bottom" constant="20" id="YS5-ud-Khw"/>
-                                    <constraint firstItem="NMY-c1-5G0" firstAttribute="top" secondItem="NfK-z1-xGX" secondAttribute="bottom" constant="21" id="bzM-fu-Gyg"/>
-                                    <constraint firstItem="NfK-z1-xGX" firstAttribute="leading" secondItem="UWn-Bi-kxF" secondAttribute="leading" id="uSd-NN-xcW"/>
-                                </constraints>
-                            </scrollView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="UWn-Bi-kxF" firstAttribute="centerX" secondItem="dVb-0w-STE" secondAttribute="centerX" id="FXW-yb-eEC"/>
-                            <constraint firstItem="UWn-Bi-kxF" firstAttribute="top" secondItem="dVb-0w-STE" secondAttribute="top" id="RBh-1p-UjL"/>
-                            <constraint firstItem="UWn-Bi-kxF" firstAttribute="bottom" secondItem="Leq-Eb-dbv" secondAttribute="bottom" id="UTq-Ik-ccG"/>
-                            <constraint firstItem="UWn-Bi-kxF" firstAttribute="leading" secondItem="dVb-0w-STE" secondAttribute="leading" id="XMQ-UY-msj"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Leq-Eb-dbv"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1100"/>
-                    <connections>
-                        <outlet property="Alpha" destination="RAw-8m-8HY" id="D8Z-JC-c0k"/>
-                        <outlet property="Amiodarone" destination="BmA-NV-mui" id="QJn-Kf-Xky"/>
-                        <outlet property="Beta" destination="Osk-ge-Bfg" id="75R-ev-cFu"/>
-                        <outlet property="Carbonic" destination="3QH-AZ-2qf" id="mgC-Vm-MtF"/>
-                        <outlet property="Carmustine" destination="GL3-WG-GfJ" id="AtU-ef-9X4"/>
-                        <outlet property="Chloroquine" destination="rLf-9j-wWi" id="qcp-2a-Vvn"/>
-                        <outlet property="Cidofovir" destination="k6T-VD-r4W" id="PRi-94-qEw"/>
-                        <outlet property="Digoxin" destination="iAu-Fp-y9e" id="Lcb-fB-yiI"/>
-                        <outlet property="Diuretics" destination="PuC-Uu-dDu" id="8B7-g0-kBw"/>
-                        <outlet property="Echothiophate" destination="7aK-iu-IGb" id="8G9-uk-FmD"/>
-                        <outlet property="Epinephrine" destination="lql-m6-Clu" id="E8Y-wQ-j4n"/>
-                        <outlet property="myView" destination="NfK-z1-xGX" id="j3c-m3-3bC"/>
-                    </connections>
+                    <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ji1-Yq-IxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="872.79999999999995" y="105.24737631184409"/>
+            <point key="canvasLocation" x="872.79999999999995" y="104.7976011994003"/>
         </scene>
     </scenes>
 </document>

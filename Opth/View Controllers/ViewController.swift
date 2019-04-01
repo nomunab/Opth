@@ -23,20 +23,9 @@ class ViewController: UIViewController{
         parse.csv(data:"/Users/Angie/Desktop/test/SmallTes.txt")
         status.printContents()
 
-        
-        //cardFront.text = status.getFront(index: 0)
-        cardFront.text = "Pharmacologic Side Effects"
-        
-        card.layer.cornerRadius = 4.0
-        card.layer.borderWidth = 1.0
-        card.layer.borderColor = UIColor.clear.cgColor
-        card.layer.masksToBounds = false
-        card.layer.shadowColor = UIColor.gray.cgColor
-        card.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        card.layer.shadowRadius = 4.0
-        card.layer.shadowOpacity = 1.0
-        card.layer.masksToBounds = false
-        card.layer.shadowPath = UIBezierPath(roundedRect: card.bounds, cornerRadius: card.layer.cornerRadius).cgPath
+
+        status.calculateReviewList();
+        cardFront.text = status.ReviewList[0].subtopicName
     }
     @IBAction func handleTap(_ sender: Any) {
         print("tap")

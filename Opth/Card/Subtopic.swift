@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Subtopic{
+class Subtopic{ // aka Slide
     var subtopicName:String
     var cards:[Card]
     var img_list:[String]
