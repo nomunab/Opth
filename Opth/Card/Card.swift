@@ -1,22 +1,18 @@
 //
-//  DataNode.swift
+//  Card.swift
 //  Opth
 //
-//  Created by Angie Ta on 2/14/19.
+//  Created by Angie Ta on 3/12/19.
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
 
-// stores the information on one card
 import Foundation
-
 class Card{
-    var front:String!
-    var back:String!
-    var score:Int!
+    var header:String
+    var info:String
     
-    init(front:String, back:String){
-        self.front = front
-        self.back = back
-        self.score = 0
+    init(header:String, info:String){
+        self.header = header
+        self.info = info
     }
 }

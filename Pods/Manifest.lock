@@ -1,0 +1,16 @@
+PODS:
+  - SMLib (1.0.2)
+
+DEPENDENCIES:
+  - SMLib
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SMLib
+
+SPEC CHECKSUMS:
+  SMLib: 4b5c3a98bb6c1473d4bf952c94e9dc113906cb5f
+
+PODFILE CHECKSUM: 6fdfa4d7afedca6edf2f174325eeb485788bcac6
+
+COCOAPODS: 1.6.1
