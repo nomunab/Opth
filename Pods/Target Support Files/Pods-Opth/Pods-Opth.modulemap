@@ -1,0 +1,6 @@
+framework module Pods_Opth {
+  umbrella header "Pods-Opth-umbrella.h"
+
+  export *
+  module * { export * }
+}
