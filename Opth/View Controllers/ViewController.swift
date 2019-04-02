@@ -33,7 +33,7 @@ class ViewController: UIViewController{
         //createDeck(data: csv(data:"/Users/Itzel/Desktop/Topic.txt"))
         //status.printDeck()
         
-        cardFront.text = status.getFront(index: 0)
+       // cardFront.text = status.getFront(index: 0)
         
         card.layer.cornerRadius = 4.0
         card.layer.borderWidth = 1.0
