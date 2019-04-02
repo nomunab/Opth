@@ -21,7 +21,8 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        parse.csv(data:"/Users/Angie/Desktop/test/SmallTes.txt")
+        //parse.csv(data:"/Users/Angie/Desktop/test/SmallTes.txt")
+        parse.csv(data:"/Users/Itzel/Desktop/SmallTes.txt")
         status.printContents()
 
 
@@ -29,8 +30,8 @@ class ViewController: UIViewController{
         cardFront.text = status.ReviewList[0].subtopicName
 
         //createDeck(data: csv(data:"/Users/Angie/Desktop/Topic.txt"))
-        createDeck(data: csv(data:"/Users/Itzel/Desktop/Topic.txt"))
-        status.printDeck()
+        //createDeck(data: csv(data:"/Users/Itzel/Desktop/Topic.txt"))
+        //status.printDeck()
         
         cardFront.text = status.getFront(index: 0)
         
