@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uay-KK-Vsu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VOe-ny-xAh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,68 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="FYG-Li-C5D">
+            <objects>
+                <viewController id="VOe-ny-xAh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gYU-VE-sfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXP-RV-PVF">
+                                <rect key="frame" x="62.5" y="298.5" width="250" height="70"/>
+                                <color key="backgroundColor" red="0.69343385262695056" green="0.96940380334854126" blue="0.65632943496180629" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="97l-Uv-vBC"/>
+                                    <constraint firstAttribute="height" constant="70" id="lWe-gf-SNy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <state key="normal" title="Start New"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="uay-KK-Vsu" kind="presentation" modalTransitionStyle="flipHorizontal" id="LF6-TF-npZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snn-qQ-Pag">
+                                <rect key="frame" x="62.5" y="418.5" width="250" height="70"/>
+                                <color key="backgroundColor" red="0.78726753705201724" green="0.94890077110491733" blue="0.96940380334854126" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Mbk-OS-y5W"/>
+                                    <constraint firstAttribute="width" constant="250" id="UpX-Rj-dZK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <state key="normal" title="Resume"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="uay-KK-Vsu" kind="presentation" modalTransitionStyle="flipHorizontal" id="JCy-hk-iUf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xXP-RV-PVF" firstAttribute="centerX" secondItem="gYU-VE-sfJ" secondAttribute="centerX" id="6FX-zJ-XvV"/>
+                            <constraint firstItem="Snn-qQ-Pag" firstAttribute="centerX" secondItem="gYU-VE-sfJ" secondAttribute="centerX" id="6w6-6A-YJD"/>
+                            <constraint firstItem="xXP-RV-PVF" firstAttribute="centerY" secondItem="gYU-VE-sfJ" secondAttribute="centerY" id="KYx-jX-zm4"/>
+                            <constraint firstItem="Snn-qQ-Pag" firstAttribute="top" secondItem="xXP-RV-PVF" secondAttribute="bottom" constant="50" id="pmc-Mu-8CA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1So-Jb-msO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gmV-aj-oKf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gU0-rt-OHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1431" y="106"/>
+        </scene>
         <!--Contents Of Table View Controller-->
         <scene sceneID="vxc-wl-4IH">
             <objects>
@@ -18,11 +80,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="00l-Ur-Dow">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wq6-oJ-lp0">
+                                    <rect key="frame" x="20" y="12" width="61" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="&lt; Back"/>
+                                    <connections>
+                                        <segue destination="VOe-ny-xAh" kind="presentation" id="8cd-4K-Ybr"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wye-DZ-njb">
+                                    <rect key="frame" x="158.5" y="14.5" width="58" height="31.5"/>
+                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Wq6-oJ-lp0" firstAttribute="leading" secondItem="00l-Ur-Dow" secondAttribute="leading" constant="20" id="49u-WU-ifk"/>
+                                <constraint firstItem="wye-DZ-njb" firstAttribute="centerY" secondItem="00l-Ur-Dow" secondAttribute="centerY" id="fU4-vJ-fXu"/>
+                                <constraint firstItem="wye-DZ-njb" firstAttribute="centerX" secondItem="00l-Ur-Dow" secondAttribute="centerX" id="kjl-ng-FPS"/>
+                                <constraint firstItem="Wq6-oJ-lp0" firstAttribute="centerY" secondItem="00l-Ur-Dow" secondAttribute="centerY" id="lHL-I2-qyI"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="3wo-eN-og6">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3wo-eN-og6" id="uAg-HB-P72">
+                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3wo-eN-og6" id="uAg-HB-P72">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
@@ -36,7 +125,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QyT-vQ-Us1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-532" y="106"/>
+            <point key="canvasLocation" x="-634.39999999999998" y="105.69715142428787"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -89,7 +178,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="132" y="105.69715142428787"/>
+            <point key="canvasLocation" x="153" y="106"/>
         </scene>
         <!--Card Reveal View Controller-->
         <scene sceneID="vZ7-ge-rp7">
@@ -127,9 +216,6 @@
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Unsure"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Wlg-MM-2Cl"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-Mh-PqG" userLabel="easyButton">
                                 <rect key="frame" x="272.5" y="617" width="90" height="35"/>
@@ -141,9 +227,6 @@
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Hard"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="l3w-7Y-8dH"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZh-F0-2AT" userLabel="hardButton">
                                 <rect key="frame" x="12.5" y="617" width="90" height="35"/>
@@ -155,9 +238,6 @@
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Easy"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Bhu-nT-weO"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -185,11 +265,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ji1-Yq-IxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="106"/>
+            <point key="canvasLocation" x="1033" y="106"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wNO-T6-5lu"/>
-        <segue reference="l3w-7Y-8dH"/>
+        <segue reference="LF6-TF-npZ"/>
     </inferredMetricsTieBreakers>
 </document>

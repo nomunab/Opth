@@ -15,14 +15,16 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
         //parse.csv(data:"/Users/Angie/Desktop/test/SmallTes.txt")
-        parse.csv(data:"/Users/Itzel/Desktop/SmallTes.txt")
+        //parse.csv(data:"/Users/Itzel/Desktop/SmallTes.txt")
+        parse.csv(data:"/Users/cathyhsieh/Desktop/SmallTes.txt")
         status.printContents()
 
 
@@ -45,7 +47,7 @@ class ViewController: UIViewController{
         card.layer.shadowOpacity = 1.0
         card.layer.masksToBounds = false
         card.layer.shadowPath = UIBezierPath(roundedRect: card.bounds, cornerRadius: card.layer.cornerRadius).cgPath
-
+        
     }
     @IBAction func handleTap(_ sender: Any) {
         print("tap")
