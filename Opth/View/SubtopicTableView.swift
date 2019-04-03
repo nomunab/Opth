@@ -8,12 +8,6 @@
 
 import UIKit
 
-class SubtopicTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var Header: UILabel!
-    @IBOutlet weak var Info: UILabel!
-}
-
 class SubtopicTableView: UITableView {
     /*
     // Only override draw() if you perform custom drawing.

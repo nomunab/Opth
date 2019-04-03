@@ -25,6 +25,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        subtopicTableView.rowHeight = UITableView.automaticDimension
         
         //UI for buttons
         easyButton.layer.cornerRadius = 10
@@ -59,15 +60,20 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     // Provide a cell object for each row.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Fetch a cell of the appropriate type.
-        var cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath)
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCell.CellStyle.value2, reuseIdentifier: "infoCell")
-        }
+//        var cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath)
+//        if cell == nil {
+//            cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "infoCell")
+//        }
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
+        cell.Header.text = status.ReviewList[1].cards[indexPath.row].header
+        cell.Info.text = status.ReviewList[1].cards[indexPath.row].info
+        
+        
         
         // Configure the cell’s contents.
-        //cell.textLabel!.text = "Cell text"
-        cell.textLabel!.text = status.ReviewList[1].cards[indexPath.row].header
-        cell.detailTextLabel!.text = status.ReviewList[1].cards[indexPath.row].info
+        //cell.textLabel!.text = status.ReviewList[1].cards[indexPath.row].header
+        //cell.detailTextLabel?.text = status.ReviewList[1].cards[indexPath.row].info
         
         return cell
     }

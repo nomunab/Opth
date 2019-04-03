@@ -24,7 +24,7 @@ class ContentsOfTableViewController: UITableViewController {
         super.viewDidLoad()
         
         //parse.csv(data: "/Users/Itzel/Desktop/SmallTes.txt")
-        parse.csv(data: "/Users/cathyhsieh/Desktop/SmallTes.txt")
+        parse.csv(data: "/Users/Angie/Desktop/test/SmallTes.txt")
         status.printContents()
         
         topic = status.CategoryList[0].topics[0]

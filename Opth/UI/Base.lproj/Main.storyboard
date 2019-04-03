@@ -53,7 +53,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="uay-KK-Vsu" kind="presentation" modalTransitionStyle="flipHorizontal" id="JCy-hk-iUf"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="g4g-uo-ZiU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -190,15 +190,44 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5bd-IH-adQ" customClass="SubtopicTableView" customModule="Opth" customModuleProvider="target">
                                 <rect key="frame" x="10" y="261" width="355" height="336"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="90" id="XWO-jC-J2z" customClass="SubtopicTableViewCell" customModule="Opth" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="355" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SubtopicInfoCell" rowHeight="132" id="XWO-jC-J2z" customClass="SubtopicTableViewCell" customModule="Opth" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="355" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XWO-jC-J2z" id="0Fc-KA-MfV">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="131.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fe-zB-cmc">
+                                                    <rect key="frame" x="155.5" y="11" width="44.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.22352941179999999" green="0.76470588240000004" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adl-zL-iXO">
+                                                    <rect key="frame" x="156.5" y="40.5" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="1fe-zB-cmc" firstAttribute="centerX" secondItem="0Fc-KA-MfV" secondAttribute="centerX" id="8bz-f8-0Be"/>
+                                                <constraint firstItem="1fe-zB-cmc" firstAttribute="top" secondItem="0Fc-KA-MfV" secondAttribute="top" constant="11" id="H6M-0R-yBg"/>
+                                                <constraint firstItem="adl-zL-iXO" firstAttribute="top" secondItem="1fe-zB-cmc" secondAttribute="bottom" constant="8" id="PcZ-s3-qSY"/>
+                                                <constraint firstAttribute="bottom" secondItem="adl-zL-iXO" secondAttribute="bottom" constant="70.5" id="wEk-BE-6qw"/>
+                                                <constraint firstItem="adl-zL-iXO" firstAttribute="centerX" secondItem="0Fc-KA-MfV" secondAttribute="centerX" id="xr1-Dj-drM"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Header" destination="1fe-zB-cmc" id="jY4-iE-oWy"/>
+                                            <outlet property="Info" destination="adl-zL-iXO" id="Bkg-oq-DXf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -265,10 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ji1-Yq-IxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033" y="106"/>
+            <point key="canvasLocation" x="1032.8" y="105.69715142428787"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="LF6-TF-npZ"/>
-    </inferredMetricsTieBreakers>
 </document>

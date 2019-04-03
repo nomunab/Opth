@@ -24,7 +24,7 @@ class ViewController: UIViewController{
 
         //parse.csv(data:"/Users/Angie/Desktop/test/SmallTes.txt")
         //parse.csv(data:"/Users/Itzel/Desktop/SmallTes.txt")
-        parse.csv(data:"/Users/cathyhsieh/Desktop/SmallTes.txt")
+        parse.csv(data:"/Users/Angie/Desktop/test/SmallTes.txt")
         status.printContents()
 
 

@@ -23,6 +23,7 @@
 		FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */; };
 		FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */; };
 		FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */; };
+		FDD0577B22544AD700B054C8 /* SubtopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0577A22544AD700B054C8 /* SubtopicTableViewCell.swift */; };
 		FDD1932E221B921D000A2F63 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1932D221B921D000A2F63 /* Status.swift */; };
 		FDF2A57422163BBE00B1E1D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2A57322163BBE00B1E1D0 /* AppDelegate.swift */; };
 		FDF2A57622163BBE00B1E1D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2A57522163BBE00B1E1D0 /* ViewController.swift */; };
@@ -73,6 +74,7 @@
 		FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableView.swift; sourceTree = "<group>"; };
 		FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
+		FDD0577A22544AD700B054C8 /* SubtopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableViewCell.swift; sourceTree = "<group>"; };
 		FDD1932D221B921D000A2F63 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		FDF2A57022163BBE00B1E1D0 /* Opth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Opth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF2A57322163BBE00B1E1D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */,
+				FDD0577A22544AD700B054C8 /* SubtopicTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */,
 				FDF2A57422163BBE00B1E1D0 /* AppDelegate.swift in Sources */,
 				FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */,
+				FDD0577B22544AD700B054C8 /* SubtopicTableViewCell.swift in Sources */,
 				FDD1932E221B921D000A2F63 /* Status.swift in Sources */,
 				FD2B771E221E27E800A41328 /* Parse.swift in Sources */,
 				FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */,
