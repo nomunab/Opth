@@ -10,14 +10,21 @@ import Foundation
 // handles all interactions with altering the data
 // when database is decided, this will handle all interactions with the database
 class Status{
+    var curReviewIndex:Int
     var ReviewList:[Subtopic] // list of subtopics/slides to for review/spaced rep
     var CategoryList:[Category]
     
     init(){
+        self.curReviewIndex = 0
         self.ReviewList = []
         self.CategoryList = []
     }
     
+    func setCurReviewIndex(index: Int){
+        self.curReviewIndex = index
+    }
+    
+    // to be edited by space rep forumla later
     func calculateReviewList(){
         self.ReviewList = CategoryList[0].topics[0].subtopics;
         print(self.ReviewList)

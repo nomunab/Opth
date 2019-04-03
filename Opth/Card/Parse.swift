@@ -32,7 +32,12 @@ class Parse{
             // loop through rows of file, skip header row
             for row in parsedCSV.dropFirst(){
                 var rowSplit: [String] = row.components(separatedBy: "\t")
-                setData(row: rowSplit)
+                rowSplit = rowSplit.filter(){$0 != "nil"}
+                rowSplit = rowSplit.filter(){$0 != ""}
+                if(rowSplit.count > 5){
+                   setData(row: rowSplit)
+                }
+                print(rowSplit)
             }
             parsedData = parsedCSV // if successful return this
         } catch {
@@ -50,15 +55,20 @@ class Parse{
         status.addTopic(category: category, topic: topic)
         
         let ifImg = [".jpg",".png"]
-        if(ifImg.contains(where: row[4].contains)){
-            img = row[4]
+        if(ifImg.contains(where: row[3].contains)){
+            img = row[3]
         }
         status.addSubtopic(category: category, topic: topic, subtopic: subtopic, img: img)
         // loop through remaining header/info pairs and store
    
         for i in 4...(row.count-1){
             if((i%2==0) ){
-                status.addCard(category: category, topic: topic, subtopic: subtopic, header: row[i], info: row[i+1])
+                if((i+1) <= (row.count-1)){ // has subtext
+                    status.addCard(category: category, topic: topic, subtopic: subtopic, header: row[i], info: row[i+1])
+                }
+                else{
+                    status.addCard(category: category, topic: topic, subtopic: subtopic, header: row[i], info: "")
+                }
             }
         }
         

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Topic{
+internal class Topic{
     var topicName:String
     var subtopics:[Subtopic]
     

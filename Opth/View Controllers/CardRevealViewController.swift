@@ -9,9 +9,9 @@
 import Foundation
 
 import UIKit
-// view controller of card back
-// add scroll view
+
 class CardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
     
 
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
@@ -59,21 +59,12 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Provide a cell object for each row.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Fetch a cell of the appropriate type.
-//        var cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath)
-//        if cell == nil {
-//            cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "infoCell")
-//        }
-        
+        // fetch cell
         var cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
+        
+        // fill cell contents
         cell.Header.text = status.ReviewList[1].cards[indexPath.row].header
         cell.Info.text = status.ReviewList[1].cards[indexPath.row].info
-        
-        
-        
-        // Configure the cell’s contents.
-        //cell.textLabel!.text = status.ReviewList[1].cards[indexPath.row].header
-        //cell.detailTextLabel?.text = status.ReviewList[1].cards[indexPath.row].info
         
         return cell
     }
