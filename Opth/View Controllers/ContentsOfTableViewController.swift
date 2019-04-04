@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 
+//TODO: add category
 //populate the table
 struct cellData {
     var opened = Bool()
@@ -23,26 +24,37 @@ class ContentsOfTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //parse.csv(data: "/Users/Itzel/Desktop/SmallTes.txt")
-        parse.csv(data: "/Users/Angie/Desktop/test/SmallTes.txt")
-        status.printContents()
+        parse.csv(data:"/Users/Itzel/Desktop/Opth/Opth/Information/biggerdata.txt")
         
-        topic = status.CategoryList[0].topics[0]
-        print(topic.subtopics[0].subtopicName)
+        // use for loop to parse through all the categories,topics, and subtopic
+        let categories = status.CategoryList
+        let topicss = status.CategoryList[0].topics
+        let subtopicss = status.CategoryList[0].topics[0].subtopics
         
-        tableViewData = [cellData(opened: false, topic: topic.topicName, subtopic: [topic.subtopics[0].subtopicName])]
-
+        for category in categories {
+            print ("I am category: ",category.categoryName)
+        }
+        for topic in topicss {
+            print("I am topics: ",topic.topicName)
+        }
+        for subtopic in subtopicss {
+            print("I am subtopics: ", subtopic.subtopicName)
+        }
         
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        for category in categories {
+            for topic in topicss {
+                for subtopic in subtopicss {
+                   tableViewData = [cellData(opened: false, topic: topic.topicName, subtopic: [subtopic.subtopicName])]
+                }
+            }
+        }
     }
 
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return tableViewData.count
     }
 
+    //this one seems fine
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // shows subtopics when topic is clicked
         if tableViewData[section].opened == true {
@@ -59,6 +71,7 @@ class ContentsOfTableViewController: UITableViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
             cell.textLabel?.text = tableViewData[indexPath.section].topic
+            print("I am the cell text: ", tableViewData[indexPath.section].topic)
             return cell
         }
         else {
@@ -66,6 +79,7 @@ class ContentsOfTableViewController: UITableViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
             cell.textLabel?.text = tableViewData[indexPath.section].subtopic[dataIndex]
+            print("I am the cell text if not topic: ", tableViewData[indexPath.section].subtopic[dataIndex])
             return cell
         }
     }
@@ -87,60 +101,5 @@ class ContentsOfTableViewController: UITableViewController {
         }
     }
     
-   /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
