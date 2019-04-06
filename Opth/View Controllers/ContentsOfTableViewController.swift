@@ -56,14 +56,13 @@ class ContentsOfTableViewController: UITableViewController {
                     topicDic[topic.topicName] = subtopicssAr
                     topicKey = Array(topicDic.keys)
                     print(topicKey)
-                    //tableViewData = [cellData(opened: false, topic: topicKey, subtopic: subtopicssAr)]
                 }
             }
         }
         
-        
-        tableViewData = [cellData(opened: false, topic: topicssAr, subtopic: subtopicssAr)]
-        
+        for numTopic in topicssAr{
+            tableViewData.append(cellData(opened: false, topic: [numTopic], subtopic: subtopicssAr))
+        }
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
