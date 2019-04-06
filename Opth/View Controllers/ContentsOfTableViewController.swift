@@ -13,7 +13,7 @@ import Foundation
 //populate the table
 struct cellData {
     var opened = Bool()
-    var topic: String
+    var topic: [String]
     var subtopic: [String]
 }
 
@@ -24,30 +24,46 @@ class ContentsOfTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        parse.csv(data:"/Users/Itzel/Desktop/Opth/Opth/Information/biggerdata.txt")
+        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
         
         // use for loop to parse through all the categories,topics, and subtopic
         let categories = status.CategoryList
         let topicss = status.CategoryList[0].topics
         let subtopicss = status.CategoryList[0].topics[0].subtopics
+
+        var categoriesAr = [String]()
+        var topicssAr = [String]()
+        var subtopicssAr = [String]()
+        
+        var categoryDic = [String:[String]]()
+        var topicDic = [String:[String]]()
+        var topicKey = Array(topicDic.keys)
+        
+        for subtopics in subtopicss{
+            print("this is suptopics: ", subtopics.subtopicName)
+        }
         
         for category in categories {
-            print ("I am category: ",category.categoryName)
-        }
-        for topic in topicss {
-            print("I am topics: ",topic.topicName)
-        }
-        for subtopic in subtopicss {
-            print("I am subtopics: ", subtopic.subtopicName)
-        }
-        
-        for category in categories {
+            print ("category: " + category.categoryName)
+            categoriesAr.append(category.categoryName)
             for topic in topicss {
+                print("topic: " + topic.topicName)
+                topicssAr.append(topic.topicName)
                 for subtopic in subtopicss {
-                   tableViewData = [cellData(opened: false, topic: topic.topicName, subtopic: [subtopic.subtopicName])]
+                    print("subtopic: " + subtopic.subtopicName)
+                    subtopicssAr.append(subtopic.subtopicName)
+                    categoryDic[category.categoryName] = topicssAr
+                    topicDic[topic.topicName] = subtopicssAr
+                    topicKey = Array(topicDic.keys)
+                    print(topicKey)
+                    //tableViewData = [cellData(opened: false, topic: topicKey, subtopic: subtopicssAr)]
                 }
             }
         }
+        
+        
+        tableViewData = [cellData(opened: false, topic: topicssAr, subtopic: subtopicssAr)]
+        
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,13 +81,16 @@ class ContentsOfTableViewController: UITableViewController {
         }
     }
 
+    //need to take a look here
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let newIndex = indexPath.row
         let dataIndex = indexPath.row - 1
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
-            cell.textLabel?.text = tableViewData[indexPath.section].topic
-            print("I am the cell text: ", tableViewData[indexPath.section].topic)
+            cell.textLabel?.text = tableViewData[indexPath.section].topic[newIndex]
+            cell.textLabel?.textColor = UIColor.white
+            print("I am the cell text: ", tableViewData[indexPath.section].topic[newIndex])
             return cell
         }
         else {
@@ -79,6 +98,7 @@ class ContentsOfTableViewController: UITableViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
             cell.textLabel?.text = tableViewData[indexPath.section].subtopic[dataIndex]
+            cell.textLabel?.textColor = UIColor.white
             print("I am the cell text if not topic: ", tableViewData[indexPath.section].subtopic[dataIndex])
             return cell
         }
