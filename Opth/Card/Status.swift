@@ -133,6 +133,10 @@ class Status{
         
     }
     
+    func addImg(img: String, subtopic: Subtopic){
+        subtopic.img_list.append(img)
+    }
+    
     func printContents(){
         for category in CategoryList{
             print(category.categoryName)

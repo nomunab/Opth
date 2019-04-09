@@ -19,18 +19,27 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     var counter = 0
     
     //Buttons
-    @IBOutlet weak var easyButton: UIButton!
-    @IBOutlet weak var unsureButton: UIButton!
-    @IBOutlet weak var hardButton: UIButton!
+    @IBAction func easyOnClick(_ sender: Any) {
+        print("easy")
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func unsureOnClick(_ sender: Any) {
+         print("unsure")
+    }
+    @IBAction func hardOnClick(_ sender: Any) {
+         print("hard")
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let currentReviewIndex = status.curReviewIndex
+//        if(status.ReviewList[currentReviewIndex].img_list[currentReviewIndex] != "no image"){
+//            
+//        }
         subtopicTableView.rowHeight = UITableView.automaticDimension
         
-        //UI for buttons
-        easyButton.layer.cornerRadius = 10
-        unsureButton.layer.cornerRadius = 10
-        hardButton.layer.cornerRadius = 10
+
         
     }
     
@@ -43,18 +52,19 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
      and use for loop to reveal each label
      */
     //Show the label one by one when tap
-    @objc func tap(sender:UITapGestureRecognizer) {
-        counter = counter + 1
-
-    }
+//    @objc func tap(sender:UITapGestureRecognizer) {
+//        counter = counter + 1
+//
+//    }
     
-    @IBAction func dismiss(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func dismiss(_ sender: UIButton) {
+//        print("dismiss")
+//        dismiss(animated: true, completion: nil)
+//    }
     
     // Return the number of rows for the table.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return status.ReviewList[1].cards.count
+        return status.ReviewList[status.curReviewIndex].cards.count
     }
     
     // Provide a cell object for each row.
@@ -63,8 +73,8 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         var cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
         // fill cell contents
-        cell.Header.text = status.ReviewList[1].cards[indexPath.row].header
-        cell.Info.text = status.ReviewList[1].cards[indexPath.row].info
+        cell.Header.text = status.ReviewList[status.curReviewIndex].cards[indexPath.row].header
+        cell.Info.text = status.ReviewList[status.curReviewIndex].cards[indexPath.row].info
         
         return cell
     }

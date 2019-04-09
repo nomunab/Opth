@@ -58,6 +58,9 @@ class Parse{
         if(ifImg.contains(where: row[3].contains)){
             img = row[3]
         }
+        else{
+            img = "no image"
+        }
         status.addSubtopic(category: category, topic: topic, subtopic: subtopic, img: img)
         // loop through remaining header/info pairs and store
    

@@ -178,7 +178,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="153" y="106"/>
+            <point key="canvasLocation" x="50" y="106"/>
         </scene>
         <!--Card Reveal View Controller-->
         <scene sceneID="vZ7-ge-rp7">
@@ -189,7 +189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5bd-IH-adQ" customClass="SubtopicTableView" customModule="Opth" customModuleProvider="target">
-                                <rect key="frame" x="10" y="261" width="355" height="336"/>
+                                <rect key="frame" x="10" y="26" width="355" height="571"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -245,6 +245,9 @@
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Unsure"/>
+                                <connections>
+                                    <action selector="unsureOnClick:" destination="LNz-K0-qAO" eventType="touchUpInside" id="xfV-CQ-V8P"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-Mh-PqG" userLabel="easyButton">
                                 <rect key="frame" x="272.5" y="617" width="90" height="35"/>
@@ -256,6 +259,9 @@
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Hard"/>
+                                <connections>
+                                    <action selector="hardOnClick:" destination="LNz-K0-qAO" eventType="touchUpInside" id="xan-iE-g0h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZh-F0-2AT" userLabel="hardButton">
                                 <rect key="frame" x="12.5" y="617" width="90" height="35"/>
@@ -267,6 +273,9 @@
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Easy"/>
+                                <connections>
+                                    <action selector="easyOnClick:" destination="LNz-K0-qAO" eventType="touchUpInside" id="Sxg-u9-rlk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -277,24 +286,22 @@
                             <constraint firstItem="BKJ-JI-RCB" firstAttribute="top" secondItem="5bd-IH-adQ" secondAttribute="bottom" constant="20" id="LEU-OX-BCW"/>
                             <constraint firstItem="BKJ-JI-RCB" firstAttribute="leading" secondItem="cZh-F0-2AT" secondAttribute="trailing" constant="40" id="Own-Ai-48E"/>
                             <constraint firstItem="cZh-F0-2AT" firstAttribute="top" secondItem="5bd-IH-adQ" secondAttribute="bottom" constant="20" id="UP1-mG-v8Y"/>
+                            <constraint firstItem="Leq-Eb-dbv" firstAttribute="bottom" secondItem="5bd-IH-adQ" secondAttribute="bottom" constant="70" id="UW5-gg-tZn"/>
                             <constraint firstItem="5bd-IH-adQ" firstAttribute="leading" secondItem="Leq-Eb-dbv" secondAttribute="leading" constant="10" id="guM-vn-6Ce"/>
                             <constraint firstItem="yoK-Mh-PqG" firstAttribute="top" secondItem="5bd-IH-adQ" secondAttribute="bottom" constant="20" id="l7B-EF-6CB"/>
-                            <constraint firstItem="5bd-IH-adQ" firstAttribute="top" secondItem="Leq-Eb-dbv" secondAttribute="top" constant="241" id="n94-sW-Okv"/>
                             <constraint firstItem="Leq-Eb-dbv" firstAttribute="bottom" secondItem="5bd-IH-adQ" secondAttribute="bottom" constant="70" id="wMJ-ji-9Ve"/>
+                            <constraint firstItem="5bd-IH-adQ" firstAttribute="top" secondItem="Leq-Eb-dbv" secondAttribute="top" constant="6" id="yFN-Da-b8r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Leq-Eb-dbv"/>
                     </view>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="SubtopicTableView" destination="5bd-IH-adQ" id="lFs-yh-0pf"/>
-                        <outlet property="easyButton" destination="cZh-F0-2AT" id="yaD-Kh-tkZ"/>
-                        <outlet property="hardButton" destination="yoK-Mh-PqG" id="XBe-8f-ztc"/>
-                        <outlet property="unsureButton" destination="BKJ-JI-RCB" id="Sft-qG-tDI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ji1-Yq-IxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1032.8" y="105.69715142428787"/>
+            <point key="canvasLocation" x="745" y="106"/>
         </scene>
     </scenes>
 </document>

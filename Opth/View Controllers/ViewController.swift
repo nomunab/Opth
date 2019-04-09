@@ -16,8 +16,6 @@ class ViewController: UIViewController{
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,8 +25,12 @@ class ViewController: UIViewController{
 
 
         status.calculateReviewList();
-        cardFront.text = status.ReviewList[0].subtopicName
-
+        self.loadData()
+    }
+    
+    func loadData(){
+        cardFront.text = status.ReviewList[status.curReviewIndex].subtopicName
+        
         card.layer.cornerRadius = 4.0
         card.layer.borderWidth = 1.0
         card.layer.borderColor = UIColor.clear.cgColor
@@ -41,6 +43,7 @@ class ViewController: UIViewController{
         card.layer.shadowPath = UIBezierPath(roundedRect: card.bounds, cornerRadius: card.layer.cornerRadius).cgPath
         
     }
+    
     @IBAction func handleTap(_ sender: Any) {
         print("tap")
         performSegue(withIdentifier: "reveal", sender: nil)
@@ -50,6 +53,10 @@ class ViewController: UIViewController{
         if segue.identifier == "reveal",
             let destinationViewController = segue.destination as? CardRevealViewController {
             destinationViewController.transitioningDelegate = self
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // Change `2.0` to the desired number of seconds.
+                status.curReviewIndex = status.curReviewIndex + 1
+                self.loadData()
+            }
         }
     }
     
