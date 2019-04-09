@@ -21,7 +21,8 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
+        //parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
+        parse.csv(data:"/Users/Itzel/Desktop/Opth/Opth/Information/biggerdata.txt")
         status.printContents()
 
 

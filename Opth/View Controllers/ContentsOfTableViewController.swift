@@ -25,7 +25,7 @@ class ContentsOfTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
+        parse.csv(data:"/Users/Itzel/Desktop/Opth/Opth/Information/biggerdata.txt")
         
         // use for loop to parse through all the categories,topics, and subtopic
         let categories = status.CategoryList
@@ -46,17 +46,17 @@ class ContentsOfTableViewController: UITableViewController {
         
         //parse and store all the data
         for category in categories {
-            print ("category: " + category.categoryName)
+            //print ("category: " + category.categoryName)
             categoriesAr.append(category.categoryName)
             topicss = status.CategoryList[categoryCount].topics
             for topic in topicss {
-                print("topic: " + topic.topicName)
+                //print("topic: " + topic.topicName)
                 topicssAr.append(topic.topicName)
                 categoryDic[category.categoryName] = topicssAr
                 
                 subtopicss = status.CategoryList[categoryCount].topics[topicCount].subtopics
                 for subtopic in subtopicss {
-                    print("subtopic: " + subtopic.subtopicName)
+                    //print("subtopic: " + subtopic.subtopicName)
                     subtopicssAr.append(subtopic.subtopicName)
                     topicDic[topic.topicName] = subtopicssAr
                 }
@@ -68,8 +68,8 @@ class ContentsOfTableViewController: UITableViewController {
         }
 
         //add cells to table of content
-        for numTopic in topicssAr{
-            tableViewData.append(cellData(opened: false, topic: [numTopic], subtopic: topicDic[numTopic]!))
+        for (key, value) in topicDic {
+            tableViewData.append(cellData(opened: false, topic: [key], subtopic: value))
         }
     }
 
