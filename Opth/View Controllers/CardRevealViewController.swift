@@ -25,10 +25,17 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     @IBAction func unsureOnClick(_ sender: Any) {
          print("unsure")
+         dismiss(animated: true, completion: nil)
     }
     @IBAction func hardOnClick(_ sender: Any) {
          print("hard")
+         dismiss(animated: true, completion: nil)
     }
+    
+//    @IBAction func dismissSlide(_ sender: UIButton) {
+//        dismiss(animated: true, completion: nil)
+//    }
+    
 
     
     override func viewDidLoad() {
@@ -47,20 +54,6 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     func fadeIn(name: UILabel){
         UIView.animate(withDuration: 0.5, animations: {name.alpha = 1.0})
     }
-    /*Needs to find a more efficient way
-     like put all the labels in a array/vector,
-     and use for loop to reveal each label
-     */
-    //Show the label one by one when tap
-//    @objc func tap(sender:UITapGestureRecognizer) {
-//        counter = counter + 1
-//
-//    }
-    
-//    @IBAction func dismiss(_ sender: UIButton) {
-//        print("dismiss")
-//        dismiss(animated: true, completion: nil)
-//    }
     
     // Return the number of rows for the table.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

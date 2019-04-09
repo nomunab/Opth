@@ -55,8 +55,10 @@ class ViewController: UIViewController{
             destinationViewController.transitioningDelegate = self
             // delay changes to current VC until after  flip animation
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                status.curReviewIndex = status.curReviewIndex + 1
-                self.loadData()
+                if(status.curReviewIndex < status.ReviewList.count-1){
+                    status.curReviewIndex = status.curReviewIndex + 1
+                    self.loadData()
+                }
             }
         }
     }
