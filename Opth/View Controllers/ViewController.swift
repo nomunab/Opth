@@ -53,7 +53,8 @@ class ViewController: UIViewController{
         if segue.identifier == "reveal",
             let destinationViewController = segue.destination as? CardRevealViewController {
             destinationViewController.transitioningDelegate = self
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // Change `2.0` to the desired number of seconds.
+            // delay changes to current VC until after  flip animation
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 status.curReviewIndex = status.curReviewIndex + 1
                 self.loadData()
             }
