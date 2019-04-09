@@ -13,6 +13,7 @@ import Foundation
 //populate the table
 struct cellData {
     var opened = Bool()
+    //var cateogry: [String]
     var topic: [String]
     var subtopic: [String]
 }
@@ -28,40 +29,47 @@ class ContentsOfTableViewController: UITableViewController {
         
         // use for loop to parse through all the categories,topics, and subtopic
         let categories = status.CategoryList
-        let topicss = status.CategoryList[0].topics
-        let subtopicss = status.CategoryList[0].topics[0].subtopics
+        var topicss = status.CategoryList[0].topics
+        var subtopicss = status.CategoryList[0].topics[0].subtopics
 
+        //use array to store all the values
         var categoriesAr = [String]()
         var topicssAr = [String]()
         var subtopicssAr = [String]()
         
+        //use dictionary to store the key and values
         var categoryDic = [String:[String]]()
         var topicDic = [String:[String]]()
-        var topicKey = Array(topicDic.keys)
         
-        for subtopics in subtopicss{
-            print("this is suptopics: ", subtopics.subtopicName)
-        }
+        var categoryCount = 0
+        var topicCount = 0
         
+        //parse and store all the data
         for category in categories {
             print ("category: " + category.categoryName)
             categoriesAr.append(category.categoryName)
+            topicss = status.CategoryList[categoryCount].topics
             for topic in topicss {
                 print("topic: " + topic.topicName)
                 topicssAr.append(topic.topicName)
+                categoryDic[category.categoryName] = topicssAr
+                
+                subtopicss = status.CategoryList[categoryCount].topics[topicCount].subtopics
                 for subtopic in subtopicss {
                     print("subtopic: " + subtopic.subtopicName)
                     subtopicssAr.append(subtopic.subtopicName)
-                    categoryDic[category.categoryName] = topicssAr
                     topicDic[topic.topicName] = subtopicssAr
-                    topicKey = Array(topicDic.keys)
-                    print(topicKey)
                 }
+                subtopicssAr.removeAll()
+                topicCount += 1
             }
+            topicssAr.removeAll()
+            categoryCount += 1
         }
-        
+
+        //add cells to table of content
         for numTopic in topicssAr{
-            tableViewData.append(cellData(opened: false, topic: [numTopic], subtopic: subtopicssAr))
+            tableViewData.append(cellData(opened: false, topic: [numTopic], subtopic: topicDic[numTopic]!))
         }
     }
 
@@ -89,7 +97,7 @@ class ContentsOfTableViewController: UITableViewController {
                 return UITableViewCell()}
             cell.textLabel?.text = tableViewData[indexPath.section].topic[newIndex]
             cell.textLabel?.textColor = UIColor.white
-            print("I am the cell text: ", tableViewData[indexPath.section].topic[newIndex])
+            //print("i'm cell text: ", tableViewData[indexPath.section].topic[newIndex])
             return cell
         }
         else {
@@ -98,7 +106,7 @@ class ContentsOfTableViewController: UITableViewController {
                 return UITableViewCell()}
             cell.textLabel?.text = tableViewData[indexPath.section].subtopic[dataIndex]
             cell.textLabel?.textColor = UIColor.white
-            print("I am the cell text if not topic: ", tableViewData[indexPath.section].subtopic[dataIndex])
+            //print("i'm not cell: ", tableViewData[indexPath.section].subtopic[dataIndex])
             return cell
         }
     }
