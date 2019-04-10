@@ -13,7 +13,7 @@ import Foundation
 //populate the table
 struct cellData {
     var opened = Bool()
-    //var cateogry: [String]
+    var category: [String]
     var topic: [String]
     var subtopic: [String]
 }
@@ -25,13 +25,13 @@ class ContentsOfTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        parse.csv(data:"/Users/Itzel/Desktop/Opth/Opth/Information/biggerdata.txt")
+        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
         
         // use for loop to parse through all the categories,topics, and subtopic
         let categories = status.CategoryList
         var topicss = status.CategoryList[0].topics
         var subtopicss = status.CategoryList[0].topics[0].subtopics
-
+        
         //use array to store all the values
         var categoriesAr = [String]()
         var topicssAr = [String]()
@@ -46,19 +46,18 @@ class ContentsOfTableViewController: UITableViewController {
         
         //parse and store all the data
         for category in categories {
-            //print ("category: " + category.categoryName)
-            categoriesAr.append(category.categoryName)
+            let trimmed = category.categoryName.replacingOccurrences(of: "\n", with: "")  //remove any \n
+            categoriesAr.append(trimmed)
             topicss = status.CategoryList[categoryCount].topics
+            
             for topic in topicss {
-                //print("topic: " + topic.topicName)
                 topicssAr.append(topic.topicName)
-                categoryDic[category.categoryName] = topicssAr
-                
+                categoryDic[trimmed] = topicssAr
                 subtopicss = status.CategoryList[categoryCount].topics[topicCount].subtopics
+                
                 for subtopic in subtopicss {
-                    //print("subtopic: " + subtopic.subtopicName)
-                    subtopicssAr.append(subtopic.subtopicName)
-                    topicDic[topic.topicName] = subtopicssAr
+                    subtopicssAr.append("\t\t  " + subtopic.subtopicName)
+                    topicDic["\t" + topic.topicName] = subtopicssAr
                 }
                 subtopicssAr.removeAll()
                 topicCount += 1
@@ -66,17 +65,21 @@ class ContentsOfTableViewController: UITableViewController {
             topicssAr.removeAll()
             categoryCount += 1
         }
-
+        
         //add cells to table of content
-        for (key, value) in topicDic {
-            tableViewData.append(cellData(opened: false, topic: [key], subtopic: value))
+        for (categoryKey, _) in categoryDic{
+            //need to move category to here
+            
+            for (topicKey, topicValue) in topicDic{
+                tableViewData.append(cellData(opened: false, category: [categoryKey], topic: [topicKey], subtopic: topicValue))
+            }
         }
     }
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return tableViewData.count
     }
-
+    
     //this one seems fine
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // shows subtopics when topic is clicked
@@ -87,7 +90,7 @@ class ContentsOfTableViewController: UITableViewController {
             return 1
         }
     }
-
+    
     //need to take a look here
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let newIndex = indexPath.row
@@ -95,9 +98,15 @@ class ContentsOfTableViewController: UITableViewController {
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
-            cell.textLabel?.text = tableViewData[indexPath.section].topic[newIndex]
+            cell.textLabel?.text = tableViewData[indexPath.section].category[newIndex]
             cell.textLabel?.textColor = UIColor.white
-            //print("i'm cell text: ", tableViewData[indexPath.section].topic[newIndex])
+            return cell
+        }
+        else if indexPath.row == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                return UITableViewCell()}
+            cell.textLabel?.text = tableViewData[indexPath.section].topic[dataIndex]
+            cell.textLabel?.textColor = UIColor.white
             return cell
         }
         else {
@@ -106,7 +115,6 @@ class ContentsOfTableViewController: UITableViewController {
                 return UITableViewCell()}
             cell.textLabel?.text = tableViewData[indexPath.section].subtopic[dataIndex]
             cell.textLabel?.textColor = UIColor.white
-            //print("i'm not cell: ", tableViewData[indexPath.section].subtopic[dataIndex])
             return cell
         }
     }
