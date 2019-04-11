@@ -41,11 +41,14 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="gzL-WQ-aEn">
+                                <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzL-WQ-aEn">
                                     <rect key="frame" x="0.0" y="2" width="375" height="56"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="uay-KK-Vsu" id="vrl-Yq-dGA"/>
+                                    </connections>
                                 </searchBar>
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -73,6 +76,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="bookmarks" id="ikN-Go-gPV"/>
+                    <connections>
+                        <outlet property="searchBar" destination="gzL-WQ-aEn" id="cNC-gZ-8r3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QyT-vQ-Us1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
