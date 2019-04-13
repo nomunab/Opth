@@ -30,6 +30,10 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
          dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func tableViewonClick(_ sender: UITableView){
+        
+    }
+    
 //    @IBAction func dismissSlide(_ sender: UIButton) {
 //        dismiss(animated: true, completion: nil)
 //    }
@@ -59,11 +63,14 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     // Provide a cell object for each row.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // fetch cell
+        print(indexPath.row)
         var cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
         // fill cell contents
-        cell.Header.text = status.ReviewList[status.curReviewIndex].cards[indexPath.row].header
-        cell.Info.text = status.ReviewList[status.curReviewIndex].cards[indexPath.row].info
+        if(indexPath.row < status.ReviewList[status.curReviewIndex].cards.count){
+            cell.Header.text = status.ReviewList[status.curReviewIndex].cards[indexPath.row].header
+            cell.Info.text = status.ReviewList[status.curReviewIndex].cards[indexPath.row].info
+        }
         
         return cell
     }
