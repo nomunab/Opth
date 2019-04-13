@@ -12,8 +12,6 @@ import UIKit
 
 class CardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    
-
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
     //count how many taps
     var counter = 0
@@ -40,14 +38,12 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // programmically add uiview
 //        let currentReviewIndex = status.curReviewIndex
 //        if(status.ReviewList[currentReviewIndex].img_list[currentReviewIndex] != "no image"){
 //            
 //        }
         subtopicTableView.rowHeight = UITableView.automaticDimension
-        
-
-        
     }
     
     //Fade in effect

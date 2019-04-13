@@ -5,17 +5,17 @@
 //  Created by Itzel Hernandez on 4/1/19.
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
-
 import UIKit
 import Foundation
 
+//TODO: add category
 //populate the table
 struct cellData {
     var opened = Bool()
-    var topic: String
+    var category: [String]
+    var topic: [String]
     var subtopic: [String]
 }
-
 class ContentsOfTableViewController: UITableViewController {
     var tableViewData = [cellData]()
     var topic:Topic = Topic(topic: "null")
@@ -23,26 +23,64 @@ class ContentsOfTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //parse.csv(data: "/Users/Itzel/Desktop/SmallTes.txt")
-        parse.csv(data: "/Users/Angie/Desktop/test/SmallTes.txt")
-        status.printContents()
+        parse.csv(data:"/Users/Angie/Desktop/test/biggerdata.txt")
         
-        topic = status.CategoryList[0].topics[0]
-        print(topic.subtopics[0].subtopicName)
+        // use for loop to parse through all the categories,topics, and subtopic
+        let categories = status.CategoryList
+        var topicss = status.CategoryList[0].topics
+        var subtopicss = status.CategoryList[0].topics[0].subtopics
         
-        tableViewData = [cellData(opened: false, topic: topic.topicName, subtopic: [topic.subtopics[0].subtopicName])]
-
+        //use array to store all the values
+        var categoriesAr = [String]()
+        var topicssAr = [String]()
+        var subtopicssAr = [String]()
         
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //use dictionary to store the key and values
+        var categoryDic = [String:[String]]()
+        var topicDic = [String:[String]]()
+        
+        var categoryCount = 0
+        var topicCount = 0
+        
+        //parse and store all the data
+        for category in categories {
+            let trimmed = category.categoryName.replacingOccurrences(of: "\n", with: "")  //remove any \n
+            categoriesAr.append(trimmed)
+            topicss = status.CategoryList[categoryCount].topics
+            
+            for topic in topicss {
+                topicssAr.append(topic.topicName)
+                categoryDic[trimmed] = topicssAr
+                subtopicss = status.CategoryList[categoryCount].topics[topicCount].subtopics
+                
+                for subtopic in subtopicss {
+                    subtopicssAr.append("\t\t  " + subtopic.subtopicName)
+                    topicDic["\t" + topic.topicName] = subtopicssAr
+                }
+                subtopicssAr.removeAll()
+                topicCount += 1
+            }
+            topicssAr.removeAll()
+            categoryCount += 1
+        }
+        
+        //add cells to table of content
+        var category = ""
+        for (categoryKey, _) in categoryDic{
+            category = categoryKey
+            //need to move category to here
+            
+            for (topicKey, topicValue) in topicDic{
+                tableViewData.append(cellData(opened: false, category: [categoryKey], topic: [topicKey], subtopic: topicValue))
+            }
+        }
     }
-
-    // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return tableViewData.count
     }
-
+    
+    //this one seems fine
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // shows subtopics when topic is clicked
         if tableViewData[section].opened == true {
@@ -52,13 +90,23 @@ class ContentsOfTableViewController: UITableViewController {
             return 1
         }
     }
-
+    
+    //need to take a look here
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let newIndex = indexPath.row
         let dataIndex = indexPath.row - 1
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
-            cell.textLabel?.text = tableViewData[indexPath.section].topic
+            cell.textLabel?.text = tableViewData[indexPath.section].category[newIndex]
+            cell.textLabel?.textColor = UIColor.white
+            return cell
+        }
+        else if indexPath.row == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                return UITableViewCell()}
+            cell.textLabel?.text = tableViewData[indexPath.section].topic[dataIndex]
+            cell.textLabel?.textColor = UIColor.white
             return cell
         }
         else {
@@ -66,6 +114,7 @@ class ContentsOfTableViewController: UITableViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
             cell.textLabel?.text = tableViewData[indexPath.section].subtopic[dataIndex]
+            cell.textLabel?.textColor = UIColor.white
             return cell
         }
     }
@@ -87,60 +136,4 @@ class ContentsOfTableViewController: UITableViewController {
         }
     }
     
-   /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
-
