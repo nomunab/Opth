@@ -18,14 +18,19 @@ struct cellData {
     var subtopic: [String]
 }
 
-class ContentsOfTableViewController: UITableViewController {
+class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate {
+    //for searching
+    @IBOutlet weak var searchBar: UISearchBar!
+    var filteredData = [cellData]()
+    var isSearching = false
+    
     var tableViewData = [cellData]()
     var topic:Topic = Topic(topic: "null")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
+        parse.csv(data:"/Users/Itzel/Desktop/Opth/Opth/Information/biggerdata.txt")
         
         // use for loop to parse through all the categories,topics, and subtopic
         let categories = status.CategoryList
@@ -74,16 +79,30 @@ class ContentsOfTableViewController: UITableViewController {
                 tableViewData.append(cellData(opened: false, category: [categoryKey], topic: [topicKey], subtopic: topicValue))
             }
         }
+        // for searching
+        searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.default
     }
     
+    //tried the if statement
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return tableViewData.count
+        if isSearching {
+            return filteredData.count
+        }
+        else {
+            return tableViewData.count
+        }
     }
     
     //this one seems fine
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        //searching
+        if isSearching {
+            return filteredData.count
+        }
         // shows subtopics when topic is clicked
-        if tableViewData[section].opened == true {
+        else if tableViewData[section].opened == true {
             return tableViewData[section].subtopic.count + 1
         }
         else {
@@ -95,29 +114,58 @@ class ContentsOfTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let newIndex = indexPath.row
         let dataIndex = indexPath.row - 1
-        if indexPath.row == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-                return UITableViewCell()}
-            cell.textLabel?.text = tableViewData[indexPath.section].category[newIndex]
-            cell.textLabel?.textColor = UIColor.white
-            return cell
-        }
-        else if indexPath.row == 1 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-                return UITableViewCell()}
-            cell.textLabel?.text = tableViewData[indexPath.section].topic[dataIndex]
-            cell.textLabel?.textColor = UIColor.white
-            return cell
+        
+        //i think this is the problem area
+        if isSearching {
+            if indexPath.row == 0 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                    return UITableViewCell()}
+                cell.textLabel?.text = filteredData[indexPath.section].category[newIndex]
+                cell.textLabel?.textColor = UIColor.white
+                return cell
+            }
+            else if indexPath.row == 1 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                    return UITableViewCell()}
+                cell.textLabel?.text = filteredData[indexPath.section].topic[dataIndex]
+                cell.textLabel?.textColor = UIColor.white
+                return cell
+            }
+            else {
+                // use different cell identifier if needed
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                    return UITableViewCell()}
+                cell.textLabel?.text = filteredData[indexPath.section].subtopic[dataIndex]
+                cell.textLabel?.textColor = UIColor.white
+                return cell
+            }
         }
         else {
-            // use different cell identifier if needed
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-                return UITableViewCell()}
-            cell.textLabel?.text = tableViewData[indexPath.section].subtopic[dataIndex]
-            cell.textLabel?.textColor = UIColor.white
-            return cell
+            if indexPath.row == 0 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                    return UITableViewCell()}
+                cell.textLabel?.text = tableViewData[indexPath.section].category[newIndex]
+                cell.textLabel?.textColor = UIColor.white
+                return cell
+            }
+            else if indexPath.row == 1 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                    return UITableViewCell()}
+                cell.textLabel?.text = tableViewData[indexPath.section].topic[dataIndex]
+                cell.textLabel?.textColor = UIColor.white
+                return cell
+            }
+            else {
+                // use different cell identifier if needed
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                    return UITableViewCell()}
+                cell.textLabel?.text = tableViewData[indexPath.section].subtopic[dataIndex]
+                cell.textLabel?.textColor = UIColor.white
+                return cell
+            }
         }
     }
+    
     
     // write within this function in order to make subtopic redirect to card
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -135,6 +183,24 @@ class ContentsOfTableViewController: UITableViewController {
             }
         }
     }
+    // this is working
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText:String) {
+        isSearching = true
+        filteredData = tableViewData.filter({$0.category.joined(separator: ",").lowercased().prefix(searchText.count) == searchText.lowercased()})
+        filteredData = tableViewData.filter({$0.topic.joined(separator: ",").lowercased().prefix(searchText.count) == searchText.lowercased()})
+        filteredData = tableViewData.filter({$0.subtopic.joined(separator: ",").lowercased().prefix(searchText.count) == searchText.lowercased()})
+        print(filteredData)
+        print(searchText)
+        tableView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isSearching = false
+        searchBar.text = ""
+        tableView.reloadData()
+    }
+    
+    
     
 }
 
