@@ -27,7 +27,7 @@ class Status{
     // to be edited by space rep forumla later
     func calculateReviewList(){
         self.ReviewList = CategoryList[0].topics[0].subtopics;
-        print(self.ReviewList)
+        //print(self.ReviewList)
     }
     
     
@@ -37,7 +37,7 @@ class Status{
         for item in CategoryList{
             if(item.categoryName == category){
                 matchExists = true
-                print("category already exists")
+                //print("category already exists")
             }
         }
         if(matchExists == false){
@@ -55,7 +55,7 @@ class Status{
                 for top in item.topics{
                     if(top.topicName == topic){
                         matchExists = true
-                        print("topic already exists")
+                       // print("topic already exists")
                     }
                 }
             }
@@ -81,7 +81,7 @@ class Status{
                         for sub in top.subtopics{
                             if(sub.subtopicName == subtopic){
                                 matchExists = true
-                                print("subtopic already exists")
+                               // print("subtopic already exists")
                             }
                         }
                     }
@@ -117,7 +117,7 @@ class Status{
                                 for c in sub.cards{
                                     if(c.header == header){
                                         matchExists = true
-                                        print("card already exists")
+                                        //print("card already exists")
                                     }
                                 }
                             }
@@ -137,21 +137,21 @@ class Status{
         subtopic.img_list.append(img)
     }
     
-    func printContents(){
-        for category in CategoryList{
-            print(category.categoryName)
-            for topic in category.topics{
-                print("\t" + topic.topicName)
-                for subtopic in topic.subtopics{
-                    print("\t\t" + subtopic.subtopicName)
-                    for card in subtopic.cards{
-                        print("\t\t\t Header: " + card.header)
-                        print("\t\t\t Info: " + card.info)
-                    }
-                }
-            }
-        }
-    }
+//    func printContents(){
+//        for category in CategoryList{
+//            print(category.categoryName)
+//            for topic in category.topics{
+//              //  print("\t" + topic.topicName)
+//                for subtopic in topic.subtopics{
+//                  //  print("\t\t" + subtopic.subtopicName)
+//                    for card in subtopic.cards{
+//                       // print("\t\t\t Header: " + card.header)
+//                       // print("\t\t\t Info: " + card.info)
+//                    }
+//                }
+//            }
+//        }
+//    }
     
     
 }

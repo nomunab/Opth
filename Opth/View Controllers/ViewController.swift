@@ -21,7 +21,7 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view, typically from a nib.
 
         parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
-        status.printContents()
+        //status.printContents()
 
 
         status.calculateReviewList();

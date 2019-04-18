@@ -13,7 +13,7 @@ class ContentsOfTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
+        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/TwoCategories.txt")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,7 +37,7 @@ class ContentsOfTableViewController: UITableViewController {
         
         var categoryCount = status.CategoryList.count
         
-        if indexPath.row == 0 {
+        if indexPath.row == 0 || indexPath.row == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
             let trimmedCategory = status.CategoryList[indexPath.section].categoryName.replacingOccurrences(of: "\n", with: "")

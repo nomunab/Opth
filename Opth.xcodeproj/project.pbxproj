@@ -11,8 +11,7 @@
 		559C2A5B83A0BAD892A8260B /* Pods_OpthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F60C3A5A88D732E8CCED1CC /* Pods_OpthUITests.framework */; };
 		623058E522530DAF00549B9D /* swift+gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623058E422530DAF00549B9D /* swift+gif.swift */; };
 		62B2DA7B225310FC0064E7A4 /* blink.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62B2DA7A225310FB0064E7A4 /* blink.gif */; };
-		62CE6E312267D17D00ECD0C0 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6E292267D17C00ECD0C0 /* MasterViewController.m */; };
-		62CE6E332267D17D00ECD0C0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6E2B2267D17C00ECD0C0 /* DetailViewController.m */; };
+		62CE6E67226937A700ECD0C0 /* TwoCategories.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62CE6E66226937A700ECD0C0 /* TwoCategories.txt */; };
 		B15403C68CD78D97600397AD /* Pods_OpthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */; };
 		BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */; };
 		BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC95F77F2252F8C6008697EA /* SmallTes.txt */; };
@@ -59,10 +58,7 @@
 		5C5D1A9C0390EB23CF35392C /* Pods-OpthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthTests.debug.xcconfig"; path = "Target Support Files/Pods-OpthTests/Pods-OpthTests.debug.xcconfig"; sourceTree = "<group>"; };
 		623058E422530DAF00549B9D /* swift+gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "swift+gif.swift"; sourceTree = "<group>"; };
 		62B2DA7A225310FB0064E7A4 /* blink.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blink.gif; sourceTree = "<group>"; };
-		62CE6E292267D17C00ECD0C0 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		62CE6E2B2267D17C00ECD0C0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		62CE6E2C2267D17C00ECD0C0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		62CE6E2D2267D17C00ECD0C0 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = "Opth/View Controllers/MasterViewController.h"; sourceTree = SOURCE_ROOT; };
+		62CE6E66226937A700ECD0C0 /* TwoCategories.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TwoCategories.txt; sourceTree = "<group>"; };
 		73694D2F8A40800434A566FB /* Pods-OpthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthUITests.release.xcconfig"; path = "Target Support Files/Pods-OpthUITests/Pods-OpthUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7842305F1F15E03D21C79C52 /* Pods-Opth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opth.debug.xcconfig"; path = "Target Support Files/Pods-Opth/Pods-Opth.debug.xcconfig"; sourceTree = "<group>"; };
 		9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,10 +156,6 @@
 		FDD1932F221BBB80000A2F63 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				62CE6E2D2267D17C00ECD0C0 /* MasterViewController.h */,
-				62CE6E292267D17C00ECD0C0 /* MasterViewController.m */,
-				62CE6E2C2267D17C00ECD0C0 /* DetailViewController.h */,
-				62CE6E2B2267D17C00ECD0C0 /* DetailViewController.m */,
 				FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */,
 				FDF2A57522163BBE00B1E1D0 /* ViewController.swift */,
 				BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */,
@@ -265,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				BC95F77F2252F8C6008697EA /* SmallTes.txt */,
+				62CE6E66226937A700ECD0C0 /* TwoCategories.txt */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -379,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF2A57E22163BBE00B1E1D0 /* LaunchScreen.storyboard in Resources */,
+				62CE6E67226937A700ECD0C0 /* TwoCategories.txt in Resources */,
 				FDF2A57B22163BBE00B1E1D0 /* Assets.xcassets in Resources */,
 				FDF2A57922163BBE00B1E1D0 /* Main.storyboard in Resources */,
 				62B2DA7B225310FC0064E7A4 /* blink.gif in Resources */,
@@ -500,7 +494,6 @@
 			files = (
 				623058E522530DAF00549B9D /* swift+gif.swift in Sources */,
 				FD056E702238811E003CBB68 /* Subtopic.swift in Sources */,
-				62CE6E332267D17D00ECD0C0 /* DetailViewController.m in Sources */,
 				FDF2A57622163BBE00B1E1D0 /* ViewController.swift in Sources */,
 				BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */,
 				FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */,
@@ -511,7 +504,6 @@
 				FDD0577B22544AD700B054C8 /* SubtopicTableViewCell.swift in Sources */,
 				FDD1932E221B921D000A2F63 /* Status.swift in Sources */,
 				FD2B771E221E27E800A41328 /* Parse.swift in Sources */,
-				62CE6E312267D17D00ECD0C0 /* MasterViewController.m in Sources */,
 				FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */,
 				FD056E6C22387DF8003CBB68 /* Category.swift in Sources */,
 				FD056E722238818C003CBB68 /* Card.swift in Sources */,

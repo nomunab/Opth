@@ -37,7 +37,7 @@ class Parse{
                 if(rowSplit.count > 5){
                    setData(row: rowSplit)
                 }
-                print(rowSplit)
+                //print(rowSplit)
             }
             parsedData = parsedCSV // if successful return this
         } catch {

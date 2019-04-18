@@ -63,7 +63,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     // Provide a cell object for each row.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // fetch cell
-        print(indexPath.row)
+        //print(indexPath.row)
         var cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
         // fill cell contents
