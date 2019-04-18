@@ -11,6 +11,8 @@
 		559C2A5B83A0BAD892A8260B /* Pods_OpthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F60C3A5A88D732E8CCED1CC /* Pods_OpthUITests.framework */; };
 		623058E522530DAF00549B9D /* swift+gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623058E422530DAF00549B9D /* swift+gif.swift */; };
 		62B2DA7B225310FC0064E7A4 /* blink.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62B2DA7A225310FB0064E7A4 /* blink.gif */; };
+		62CE6E312267D17D00ECD0C0 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6E292267D17C00ECD0C0 /* MasterViewController.m */; };
+		62CE6E332267D17D00ECD0C0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6E2B2267D17C00ECD0C0 /* DetailViewController.m */; };
 		B15403C68CD78D97600397AD /* Pods_OpthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */; };
 		BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */; };
 		BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC95F77F2252F8C6008697EA /* SmallTes.txt */; };
@@ -57,6 +59,10 @@
 		5C5D1A9C0390EB23CF35392C /* Pods-OpthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthTests.debug.xcconfig"; path = "Target Support Files/Pods-OpthTests/Pods-OpthTests.debug.xcconfig"; sourceTree = "<group>"; };
 		623058E422530DAF00549B9D /* swift+gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "swift+gif.swift"; sourceTree = "<group>"; };
 		62B2DA7A225310FB0064E7A4 /* blink.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blink.gif; sourceTree = "<group>"; };
+		62CE6E292267D17C00ECD0C0 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		62CE6E2B2267D17C00ECD0C0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		62CE6E2C2267D17C00ECD0C0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		62CE6E2D2267D17C00ECD0C0 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = "Opth/View Controllers/MasterViewController.h"; sourceTree = SOURCE_ROOT; };
 		73694D2F8A40800434A566FB /* Pods-OpthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthUITests.release.xcconfig"; path = "Target Support Files/Pods-OpthUITests/Pods-OpthUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7842305F1F15E03D21C79C52 /* Pods-Opth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opth.debug.xcconfig"; path = "Target Support Files/Pods-Opth/Pods-Opth.debug.xcconfig"; sourceTree = "<group>"; };
 		9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +84,7 @@
 		FDD1932D221B921D000A2F63 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		FDF2A57022163BBE00B1E1D0 /* Opth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Opth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF2A57322163BBE00B1E1D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDF2A57522163BBE00B1E1D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDF2A57522163BBE00B1E1D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Opth/View Controllers/ViewController.swift"; sourceTree = SOURCE_ROOT; };
 		FDF2A57822163BBE00B1E1D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDF2A57A22163BBE00B1E1D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDF2A57D22163BBE00B1E1D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -154,12 +160,17 @@
 		FDD1932F221BBB80000A2F63 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				62CE6E2D2267D17C00ECD0C0 /* MasterViewController.h */,
+				62CE6E292267D17C00ECD0C0 /* MasterViewController.m */,
+				62CE6E2C2267D17C00ECD0C0 /* DetailViewController.h */,
+				62CE6E2B2267D17C00ECD0C0 /* DetailViewController.m */,
 				FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */,
 				FDF2A57522163BBE00B1E1D0 /* ViewController.swift */,
 				BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */,
 			);
-			path = "View Controllers";
-			sourceTree = "<group>";
+			name = "View Controllers";
+			path = "Opth/View Controllers";
+			sourceTree = SOURCE_ROOT;
 		};
 		FDD19330221BBB9A000A2F63 /* UI */ = {
 			isa = PBXGroup;
@@ -330,6 +341,7 @@
 				TargetAttributes = {
 					FDF2A56F22163BBE00B1E1D0 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					FDF2A58322163BBF00B1E1D0 = {
 						CreatedOnToolsVersion = 10.1;
@@ -488,6 +500,7 @@
 			files = (
 				623058E522530DAF00549B9D /* swift+gif.swift in Sources */,
 				FD056E702238811E003CBB68 /* Subtopic.swift in Sources */,
+				62CE6E332267D17D00ECD0C0 /* DetailViewController.m in Sources */,
 				FDF2A57622163BBE00B1E1D0 /* ViewController.swift in Sources */,
 				BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */,
 				FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */,
@@ -498,6 +511,7 @@
 				FDD0577B22544AD700B054C8 /* SubtopicTableViewCell.swift in Sources */,
 				FDD1932E221B921D000A2F63 /* Status.swift in Sources */,
 				FD2B771E221E27E800A41328 /* Parse.swift in Sources */,
+				62CE6E312267D17D00ECD0C0 /* MasterViewController.m in Sources */,
 				FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */,
 				FD056E6C22387DF8003CBB68 /* Category.swift in Sources */,
 				FD056E722238818C003CBB68 /* Card.swift in Sources */,
@@ -676,6 +690,7 @@
 			baseConfigurationReference = 7842305F1F15E03D21C79C52 /* Pods-Opth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UNFBKU938B;
@@ -688,6 +703,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.angieta.Opth45678;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Opth/View Controllers/Table of Contents/Opth-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -698,6 +715,7 @@
 			baseConfigurationReference = 04E1F4FB0135C9CABB446776 /* Pods-Opth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UNFBKU938B;
@@ -710,6 +728,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.angieta.Opth45678;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Opth/View Controllers/Table of Contents/Opth-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
