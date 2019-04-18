@@ -24,6 +24,7 @@ class ContentsOfTableViewController: UITableViewController {
     var topicViewData = [topicCellData]()
     var subIndexRow = 0
     var topicIndexRow = 0
+    var categoryIndexRow = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,8 @@ class ContentsOfTableViewController: UITableViewController {
         
         // use for loop to parse through all the categories,topics, and subtopic
         let categories = status.CategoryList
-        var topicss = status.CategoryList[0].topics
-        var subtopicss = status.CategoryList[0].topics[0].subtopics
+//        var topicss = status.CategoryList[0].topics
+//        var subtopicss = status.CategoryList[0].topics[0].subtopics
         
         //use array to store all the values
         var categoryAr = [String]()
@@ -52,12 +53,12 @@ class ContentsOfTableViewController: UITableViewController {
         for category in categories {
             let trimmedCategory = category.categoryName.replacingOccurrences(of: "\n", with: "")  //remove any "\n"
             categoryAr.append(trimmedCategory)
-            topicss = status.CategoryList[categoryCount].topics
+            var topicss = status.CategoryList[categoryCount].topics
             
             for topic in topicss {
                 topicssAr.append("\t" + topic.topicName)
                 //categoryDic[trimmedCategory] = topicssAr
-                subtopicss = status.CategoryList[categoryCount].topics[topicCount].subtopics
+                var subtopicss = status.CategoryList[categoryCount].topics[topicCount].subtopics
                 print("topic: ",topic.topicName)
                 for subtopic in subtopicss {
                     tempSubtopicAr.append("\t\t" + subtopic.subtopicName)
@@ -90,7 +91,14 @@ class ContentsOfTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // shows subtopics when topic is clicked
         if categoryViewData[section].opened == true {
-            return topicViewData[section].subtopic[section].count + 9
+            if topicViewData[section].opened == true {
+                print("section: ",section)
+                return topicViewData[section].subtopic[section].count + 2
+            }
+            else {
+                return topicViewData[section].topic.count + 1
+            }
+            
         }
         else {
             return categoryViewData[section].category.count
@@ -108,12 +116,32 @@ class ContentsOfTableViewController: UITableViewController {
             cell.textLabel?.textColor = UIColor.white
             return cell
         }
-        else if indexPath.row == 1 || indexPath.row == subtopicCount {
+            
+        //if the topicViewData is closed, only print out the topics
+        else if topicViewData[indexPath.section].opened == false {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
+            
+            print("TT1: ",topicIndexRow)
+            print(topicViewData[indexPath.section].topic[topicIndexRow])
+            
             cell.textLabel?.text = topicViewData[indexPath.section].topic[topicIndexRow] + " " + x
             cell.textLabel?.textColor = UIColor.white
+            subIndexRow = 0
+            topicIndexRow += 1
+            return cell
+        }
+            
+        
+        else if (indexPath.row == 1 || indexPath.row == subtopicCount) {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                return UITableViewCell()}
+
+            print("TT2: ",topicIndexRow)
             print(topicViewData[indexPath.section].topic[topicIndexRow])
+
+            cell.textLabel?.text = topicViewData[indexPath.section].topic[topicIndexRow] + " " + x
+            cell.textLabel?.textColor = UIColor.white
             subIndexRow = 0
             return cell
         }
@@ -122,14 +150,14 @@ class ContentsOfTableViewController: UITableViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
             subtopicCount = topicViewData[indexPath.section].subtopic[topicIndexRow].count
-            
-            cell.textLabel?.text = topicViewData[indexPath.section].subtopic[topicIndexRow][subIndexRow] + " " + x
-            cell.textLabel?.textColor = UIColor.white
-            
+
             print("T: ",topicIndexRow)
             print("S: ",subIndexRow)
-            
             print(topicViewData[indexPath.section].subtopic[topicIndexRow][subIndexRow])
+
+            cell.textLabel?.text = topicViewData[indexPath.section].subtopic[topicIndexRow][subIndexRow] + " " + x
+            cell.textLabel?.textColor = UIColor.white
+
             if(subIndexRow == subtopicCount - 1) {topicIndexRow += 1}
             subIndexRow += 1
             return cell
@@ -140,6 +168,10 @@ class ContentsOfTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var subtopicCount = topicViewData[indexPath.section].subtopic[indexPath.section].count + 2
         
+        //Set index to 0 so no out of range error, still need to fix it
+        subIndexRow = 0
+        topicIndexRow = 0
+        
         // to make sure that subtopic doesn't close up and goes somewhere else
         if indexPath.row == 0 {
             if categoryViewData[indexPath.section].opened == true {
@@ -149,6 +181,18 @@ class ContentsOfTableViewController: UITableViewController {
             }
             else {
                 categoryViewData[indexPath.section].opened = true
+                let sections = IndexSet.init(integer: indexPath.section)
+                tableView.reloadSections(sections, with: .none) // play around with this
+            }
+        }
+        else if indexPath.row == 1 || indexPath.row == subtopicCount {
+            if topicViewData[indexPath.section].opened == true {
+                topicViewData[indexPath.section].opened = false
+                let sections = IndexSet.init(integer: indexPath.section)
+                tableView.reloadSections(sections, with: .none) // play around with this
+            }
+            else {
+                topicViewData[indexPath.section].opened = true
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none) // play around with this
             }
