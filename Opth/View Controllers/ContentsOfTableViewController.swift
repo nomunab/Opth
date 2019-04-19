@@ -10,11 +10,13 @@ import UIKit
 import Foundation
 
 class ContentsOfTableViewController: UITableViewController {
+    var sectionIndex = 0
+    var rowIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/TwoCategories.txt")
+        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -76,13 +78,20 @@ class ContentsOfTableViewController: UITableViewController {
             }
         }
         else {
-            performSegue(withIdentifier: "subCell", sender: indexPath.row - categoryCount)
+            rowIndex = indexPath.row - categoryCount
+            sectionIndex = indexPath.section
+            performSegue(withIdentifier: "subCell", sender: self)
         }
     }
     
     //pass in the topic index into SubTableViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let subTableView = segue.destination as! SubTableViewController
-        subTableView.topicIndex = sender as! Int
+        subTableView.topicLabel = status.CategoryList[sectionIndex].topics[rowIndex].topicName
+        subTableView.categoryCount = status.CategoryList.count
+        subTableView.subtopicCount = status.CategoryList[sectionIndex].topics[rowIndex].subtopics.count
+        for s in status.CategoryList[sectionIndex].topics[rowIndex].subtopics {
+            subTableView.subtopicAr.append(s.subtopicName)
+        }
     }
 }
