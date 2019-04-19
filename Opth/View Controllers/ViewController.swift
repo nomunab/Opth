@@ -49,18 +49,24 @@ class ViewController: UIViewController{
         performSegue(withIdentifier: "reveal", sender: nil)
     }
     
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "reveal",
             let destinationViewController = segue.destination as? CardRevealViewController {
             destinationViewController.transitioningDelegate = self
             // delay changes to current VC until after  flip animation
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                if(status.curReviewIndex < status.ReviewList.count-1){
-                    status.curReviewIndex = status.curReviewIndex + 1
-                    self.loadData()
-                }
+        }
+        print("when segue")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            if(status.curReviewIndex < status.ReviewList.count-1){
+//                print("hello")
+                status.curReviewIndex = status.curReviewIndex + 1
+                self.loadData()
             }
         }
+        
     }
     
 }
