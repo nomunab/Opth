@@ -5,6 +5,7 @@
 //  Created by Itzel Hernandez on 4/1/19.
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
+
 import UIKit
 import Foundation
 
@@ -37,7 +38,8 @@ class ContentsOfTableViewController: UITableViewController {
         
         var categoryCount = status.CategoryList.count
         
-        if indexPath.row == 0 || indexPath.row == 1 {
+        //need to fix "indexPath.row == 0"
+        if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
             let trimmedCategory = status.CategoryList[indexPath.section].categoryName.replacingOccurrences(of: "\n", with: "")
@@ -48,13 +50,12 @@ class ContentsOfTableViewController: UITableViewController {
         else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
-
-            cell.textLabel?.text = status.CategoryList[indexPath.section].topics[indexPath.row - categoryCount].topicName
+            
+            cell.textLabel?.text = "\t" + status.CategoryList[indexPath.section].topics[indexPath.row - categoryCount].topicName
             cell.textLabel?.textColor = UIColor.white
             return cell
         }
     }
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
