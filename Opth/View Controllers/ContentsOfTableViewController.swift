@@ -36,7 +36,7 @@ class ContentsOfTableViewController: UITableViewController {
     //need to take a look here
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var categoryCount = status.CategoryList.count
+        let categoryCount = status.CategoryList.count
         
         //need to fix "indexPath.row == 0"
         if indexPath.row == 0 {
@@ -59,6 +59,10 @@ class ContentsOfTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        
+        let categoryCount = status.CategoryList.count
+        
+        //need to fix "indexPath.row == 0"
         if indexPath.row == 0 {
             if status.CategoryList[indexPath.section].opened == true {
                 status.CategoryList[indexPath.section].opened = false
@@ -71,5 +75,14 @@ class ContentsOfTableViewController: UITableViewController {
                 tableView.reloadSections(sections, with: .none)
             }
         }
+        else {
+            performSegue(withIdentifier: "subCell", sender: indexPath.row - categoryCount)
+        }
+    }
+    
+    //pass in the topic index into SubTableViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let subTableView = segue.destination as! SubTableViewController
+        subTableView.topicIndex = sender as! Int
     }
 }
